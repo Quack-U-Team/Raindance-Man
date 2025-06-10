@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5e89667dd9429f940a2008cf370035f5
+guid: 7209c124508827646906573645f1977a
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -35,6 +35,105 @@ TextureImporter:
   - first:
       213: 1935108187655325415
     second: raindance-man_10
+  - first:
+      213: -2168771083514281358
+    second: raindance-man_11
+  - first:
+      213: -7353151615283402138
+    second: raindance-man_12
+  - first:
+      213: 7326369860969892897
+    second: raindance-man_13
+  - first:
+      213: 3371235588038142456
+    second: raindance-man_14
+  - first:
+      213: -3620249614270571572
+    second: raindance-man_15
+  - first:
+      213: 4524783352231941454
+    second: raindance-man_16
+  - first:
+      213: 8629436402423786434
+    second: raindance-man_17
+  - first:
+      213: 8117576409561617427
+    second: raindance-man_18
+  - first:
+      213: -1378114129495657205
+    second: raindance-man_19
+  - first:
+      213: -2754995129941865604
+    second: raindance-man_20
+  - first:
+      213: 7979467179110429430
+    second: raindance-man_21
+  - first:
+      213: 6516795488358853003
+    second: raindance-man_22
+  - first:
+      213: -5016143492430221220
+    second: raindance-man_23
+  - first:
+      213: 5983645476669632429
+    second: raindance-man_24
+  - first:
+      213: 378835508367809579
+    second: raindance-man_25
+  - first:
+      213: 9148915823484971672
+    second: raindance-man_26
+  - first:
+      213: 5598411173498812280
+    second: raindance-man_27
+  - first:
+      213: 2292488375552198505
+    second: raindance-man_28
+  - first:
+      213: -3640456346452116166
+    second: raindance-man_29
+  - first:
+      213: -4990106194569181713
+    second: raindance-man_30
+  - first:
+      213: 1808766884763201702
+    second: raindance-man_31
+  - first:
+      213: 7327209109979477705
+    second: raindance-man_32
+  - first:
+      213: 2760465626853353004
+    second: raindance-man_33
+  - first:
+      213: -7276125993085881514
+    second: raindance-man_34
+  - first:
+      213: 7597482331776828277
+    second: raindance-man_35
+  - first:
+      213: -2734846578092395539
+    second: raindance-man_36
+  - first:
+      213: -6898807835568520213
+    second: raindance-man_37
+  - first:
+      213: -4603505845089907586
+    second: raindance-man_38
+  - first:
+      213: 555360877464611699
+    second: raindance-man_39
+  - first:
+      213: -4870035054032530528
+    second: raindance-man_40
+  - first:
+      213: 4308559610224659367
+    second: raindance-man_41
+  - first:
+      213: -2918723640858652780
+    second: raindance-man_42
+  - first:
+      213: -3363807898827959521
+    second: raindance-man_43
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -67,7 +166,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -105,7 +204,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -147,7 +246,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 24
-        y: 143
+        y: 399
         width: 16
         height: 26
       alignment: 0
@@ -169,7 +268,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 24
-        y: 79
+        y: 335
         width: 16
         height: 26
       alignment: 0
@@ -190,10 +289,10 @@ TextureImporter:
       name: raindance-man_2
       rect:
         serializedVersion: 2
-        x: 88
-        y: 81
-        width: 16
-        height: 24
+        x: 24
+        y: 271
+        width: 23
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,9 +311,9 @@ TextureImporter:
       name: raindance-man_3
       rect:
         serializedVersion: 2
-        x: 24
-        y: 21
-        width: 15
+        x: 88
+        y: 271
+        width: 23
         height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -234,10 +333,10 @@ TextureImporter:
       name: raindance-man_4
       rect:
         serializedVersion: 2
-        x: 88
-        y: 8
-        width: 16
-        height: 45
+        x: 152
+        y: 271
+        width: 22
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,10 +355,10 @@ TextureImporter:
       name: raindance-man_5
       rect:
         serializedVersion: 2
-        x: 152
-        y: 18
-        width: 16
-        height: 16
+        x: 216
+        y: 271
+        width: 22
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,10 +377,10 @@ TextureImporter:
       name: raindance-man_6
       rect:
         serializedVersion: 2
-        x: 217
-        y: 19
-        width: 14
-        height: 19
+        x: 280
+        y: 271
+        width: 25
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,10 +399,10 @@ TextureImporter:
       name: raindance-man_7
       rect:
         serializedVersion: 2
-        x: 281
-        y: 26
-        width: 14
-        height: 14
+        x: 344
+        y: 271
+        width: 24
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -322,10 +421,10 @@ TextureImporter:
       name: raindance-man_8
       rect:
         serializedVersion: 2
-        x: 343
-        y: 9
-        width: 17
-        height: 42
+        x: 408
+        y: 271
+        width: 23
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,10 +443,10 @@ TextureImporter:
       name: raindance-man_9
       rect:
         serializedVersion: 2
-        x: 408
-        y: 14
-        width: 15
-        height: 26
+        x: 469
+        y: 271
+        width: 22
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -366,6 +465,732 @@ TextureImporter:
       name: raindance-man_10
       rect:
         serializedVersion: 2
+        x: 21
+        y: 207
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e6452fd4a2eada10800000000000000
+      internalID: 1935108187655325415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_11
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 143
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2720effa03af6e1e0800000000000000
+      internalID: -2168771083514281358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_12
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 143
+        width: 29
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66a6177809b54f990800000000000000
+      internalID: -7353151615283402138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_13
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 145
+        width: 20
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12c0d30629e7ca560800000000000000
+      internalID: 7326369860969892897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_14
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 138
+        width: 25
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f92b2fd7e809ce20800000000000000
+      internalID: 3371235588038142456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_15
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 174
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccb582f182a42cdc0800000000000000
+      internalID: -3620249614270571572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_16
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 157
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e45d26b4c724bce30800000000000000
+      internalID: 4524783352231941454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_17
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 154
+        width: 14
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cb6b42ffaae1c770800000000000000
+      internalID: 8629436402423786434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_18
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 162
+        width: 40
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 314d2095cbc67a070800000000000000
+      internalID: 8117576409561617427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_19
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 143
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b05f6733084ffdce0800000000000000
+      internalID: -1378114129495657205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_20
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 128
+        width: 71
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7b42e1a68a44c9d0800000000000000
+      internalID: -2754995129941865604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_21
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 143
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f2f3c35f13ccbe60800000000000000
+      internalID: 7979467179110429430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_22
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 143
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b896f7d18fe407a50800000000000000
+      internalID: 6516795488358853003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_23
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 143
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c503f4ff114136ab0800000000000000
+      internalID: -5016143492430221220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_24
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 143
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daf24cabbdd2a0350800000000000000
+      internalID: 5983645476669632429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_25
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 145
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2c519043e4e14500800000000000000
+      internalID: 378835508367809579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_26
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 147
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89aa5cae77a77fe70800000000000000
+      internalID: 9148915823484971672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_27
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 155
+        width: 14
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87779f6fc4d81bd40800000000000000
+      internalID: 5598411173498812280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_28
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 162
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 967408c080e80df10800000000000000
+      internalID: 2292488375552198505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_29
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 149
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3db769ad308a7dc0800000000000000
+      internalID: -3640456346452116166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_30
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 153
+        width: 147
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe54a31dad49fbab0800000000000000
+      internalID: -4990106194569181713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_31
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 142
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a0fccff5e70a1910800000000000000
+      internalID: 1808766884763201702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_32
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 135
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c635534dd97fa560800000000000000
+      internalID: 7327209109979477705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_33
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 130
+        width: 26
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c26254facd42f4620800000000000000
+      internalID: 2760465626853353004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_34
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 79
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6533129b5f1060b90800000000000000
+      internalID: -7276125993085881514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_35
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 81
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5734dd47dedaf6960800000000000000
+      internalID: 7597482331776828277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_36
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 21
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de33c9de68fdb0ad0800000000000000
+      internalID: -2734846578092395539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_37
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 8
+        width: 16
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be3c14333d28240a0800000000000000
+      internalID: -6898807835568520213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_38
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7c4bf503df0d10c0800000000000000
+      internalID: -4603505845089907586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_39
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 19
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37b6d6f86c905b700800000000000000
+      internalID: 555360877464611699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_40
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 26
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a3d0b0cbe82a6cb0800000000000000
+      internalID: -4870035054032530528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_41
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 9
+        width: 17
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ab490543241bcb30800000000000000
+      internalID: 4308559610224659367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_42
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 14
+        width: 15
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49fc51d005c9e77d0800000000000000
+      internalID: -2918723640858652780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: raindance-man_43
+      rect:
+        serializedVersion: 2
         x: 472
         y: 22
         width: 16
@@ -378,8 +1203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e6452fd4a2eada10800000000000000
-      internalID: 1935108187655325415
+      spriteID: f13d4b9c98a5151d0800000000000000
+      internalID: -3363807898827959521
       vertices: []
       indices: 
       edges: []
@@ -401,9 +1226,42 @@ TextureImporter:
       raindance-man_0: 606964527142244511
       raindance-man_1: 8327641396413027490
       raindance-man_10: 1935108187655325415
+      raindance-man_11: -2168771083514281358
+      raindance-man_12: -7353151615283402138
+      raindance-man_13: 7326369860969892897
+      raindance-man_14: 3371235588038142456
+      raindance-man_15: -3620249614270571572
+      raindance-man_16: 4524783352231941454
+      raindance-man_17: 8629436402423786434
+      raindance-man_18: 8117576409561617427
+      raindance-man_19: -1378114129495657205
       raindance-man_2: 3742626020158322868
+      raindance-man_20: -2754995129941865604
+      raindance-man_21: 7979467179110429430
+      raindance-man_22: 6516795488358853003
+      raindance-man_23: -5016143492430221220
+      raindance-man_24: 5983645476669632429
+      raindance-man_25: 378835508367809579
+      raindance-man_26: 9148915823484971672
+      raindance-man_27: 5598411173498812280
+      raindance-man_28: 2292488375552198505
+      raindance-man_29: -3640456346452116166
       raindance-man_3: -8353874705632807067
+      raindance-man_30: -4990106194569181713
+      raindance-man_31: 1808766884763201702
+      raindance-man_32: 7327209109979477705
+      raindance-man_33: 2760465626853353004
+      raindance-man_34: -7276125993085881514
+      raindance-man_35: 7597482331776828277
+      raindance-man_36: -2734846578092395539
+      raindance-man_37: -6898807835568520213
+      raindance-man_38: -4603505845089907586
+      raindance-man_39: 555360877464611699
       raindance-man_4: -1416872259530873177
+      raindance-man_40: -4870035054032530528
+      raindance-man_41: 4308559610224659367
+      raindance-man_42: -2918723640858652780
+      raindance-man_43: -3363807898827959521
       raindance-man_5: 2982195802954741710
       raindance-man_6: -1155933756373127498
       raindance-man_7: -3867163085207949977

@@ -38,6 +38,9 @@ TextureImporter:
   - first:
       213: 1401475740389246517
     second: cloakguy_11
+  - first:
+      213: -3695225654408745332
+    second: cloakguy_12
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -70,7 +73,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -108,7 +111,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -150,7 +153,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 6
-        y: 40
+        y: 72
         width: 19
         height: 21
       alignment: 0
@@ -172,7 +175,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 39
-        y: 40
+        y: 72
         width: 18
         height: 21
       alignment: 0
@@ -194,7 +197,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 71
-        y: 40
+        y: 72
         width: 17
         height: 20
       alignment: 0
@@ -216,7 +219,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 103
-        y: 40
+        y: 72
         width: 17
         height: 19
       alignment: 0
@@ -238,7 +241,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 6
-        y: 8
+        y: 40
         width: 19
         height: 21
       alignment: 0
@@ -260,7 +263,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 39
-        y: 8
+        y: 40
         width: 17
         height: 20
       alignment: 0
@@ -282,7 +285,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 71
-        y: 8
+        y: 40
         width: 17
         height: 19
       alignment: 0
@@ -304,7 +307,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 102
-        y: 8
+        y: 40
         width: 19
         height: 21
       alignment: 0
@@ -326,7 +329,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 135
-        y: 8
+        y: 40
         width: 18
         height: 21
       alignment: 0
@@ -348,7 +351,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 167
-        y: 8
+        y: 40
         width: 17
         height: 20
       alignment: 0
@@ -370,7 +373,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 199
-        y: 8
+        y: 40
         width: 17
         height: 19
       alignment: 0
@@ -392,7 +395,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 230
-        y: 8
+        y: 40
         width: 19
         height: 21
       alignment: 0
@@ -405,6 +408,28 @@ TextureImporter:
       bones: []
       spriteID: 5368a33b2ca037310800000000000000
       internalID: 1401475740389246517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloakguy_12
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 8
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8e6e0078dbe7bcc0800000000000000
+      internalID: -3695225654408745332
       vertices: []
       indices: 
       edges: []
@@ -427,6 +452,7 @@ TextureImporter:
       cloakguy_1: -2590261594811647728
       cloakguy_10: -3556687561931189958
       cloakguy_11: 1401475740389246517
+      cloakguy_12: -3695225654408745332
       cloakguy_2: -1231197515454356954
       cloakguy_3: 422331752846250968
       cloakguy_4: -5388758894485666700
