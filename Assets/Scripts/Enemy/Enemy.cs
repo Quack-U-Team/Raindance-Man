@@ -1,16 +1,14 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 
 public class Enemy : MonoBehaviour
 {
-
     public float speed = 1f;
     public float dashSpeed = 5f;
     public float refreshAIcooldown = 0.1f;
     public float followRange = 5f;
-    public float dashRange = 0.8f;
+    public float dashRange = 0.5f;
     public float dashDuration = 0.3f;
 
     bool isDashing = false;
@@ -49,19 +47,10 @@ public class Enemy : MonoBehaviour
 
         if (!isDashing)
         {
+
             rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
         }
 
-    }
-
-    
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            Destroy(collision.gameObject);
-        }
     }
 
     void RefreshAI()
@@ -183,6 +172,14 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            Destroy(collision.gameObject);
+        }
+    }
+
     IEnumerator Dash()
     {
 
@@ -207,5 +204,4 @@ public class Enemy : MonoBehaviour
 
         isDashing = false;
     }
-    
 }
