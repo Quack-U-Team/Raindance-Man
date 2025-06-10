@@ -336,7 +336,11 @@ PrefabInstance:
     - target: {fileID: 1498502952404741310, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 606964527142244511, guid: 5e89667dd9429f940a2008cf370035f5, type: 3}
+      objectReference: {fileID: 606964527142244511, guid: 7209c124508827646906573645f1977a, type: 3}
+    - target: {fileID: 1498502952404741310, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3640324842275185482, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
       propertyPath: shootPoint
       value: 
