@@ -80,6 +80,18 @@ TextureImporter:
   - first:
       213: 5838354576402910520
     second: dustcreature_25
+  - first:
+      213: 5372947468926881257
+    second: dustcreature_26
+  - first:
+      213: 3172769262289884633
+    second: dustcreature_27
+  - first:
+      213: -1160739710303440177
+    second: dustcreature_28
+  - first:
+      213: -1726003210521170581
+    second: dustcreature_29
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -112,7 +124,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -150,7 +162,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -192,7 +204,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 10
-        y: 43
+        y: 75
         width: 12
         height: 11
       alignment: 0
@@ -214,7 +226,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 42
-        y: 43
+        y: 75
         width: 12
         height: 11
       alignment: 0
@@ -236,7 +248,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 74
-        y: 43
+        y: 75
         width: 12
         height: 11
       alignment: 0
@@ -258,7 +270,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 106
-        y: 44
+        y: 76
         width: 13
         height: 11
       alignment: 0
@@ -280,7 +292,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 138
-        y: 43
+        y: 75
         width: 13
         height: 12
       alignment: 0
@@ -302,7 +314,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 170
-        y: 44
+        y: 76
         width: 13
         height: 11
       alignment: 0
@@ -324,9 +336,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 202
-        y: 43
-        width: 12
-        height: 11
+        y: 75
+        width: 13
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -346,9 +358,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 234
-        y: 43
+        y: 76
         width: 12
-        height: 11
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -367,9 +379,9 @@ TextureImporter:
       name: dustcreature_8
       rect:
         serializedVersion: 2
-        x: 266
-        y: 43
-        width: 12
+        x: 267
+        y: 75
+        width: 11
         height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -390,7 +402,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 298
-        y: 43
+        y: 75
         width: 12
         height: 11
       alignment: 0
@@ -412,7 +424,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 330
-        y: 43
+        y: 75
         width: 12
         height: 11
       alignment: 0
@@ -434,7 +446,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 362
-        y: 43
+        y: 75
         width: 12
         height: 11
       alignment: 0
@@ -455,9 +467,9 @@ TextureImporter:
       name: dustcreature_12
       rect:
         serializedVersion: 2
-        x: 10
-        y: 12
-        width: 13
+        x: 394
+        y: 75
+        width: 12
         height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -477,9 +489,9 @@ TextureImporter:
       name: dustcreature_13
       rect:
         serializedVersion: 2
-        x: 42
-        y: 12
-        width: 13
+        x: 426
+        y: 75
+        width: 12
         height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -499,9 +511,9 @@ TextureImporter:
       name: dustcreature_14
       rect:
         serializedVersion: 2
-        x: 74
-        y: 12
-        width: 13
+        x: 458
+        y: 75
+        width: 12
         height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -521,9 +533,9 @@ TextureImporter:
       name: dustcreature_15
       rect:
         serializedVersion: 2
-        x: 106
-        y: 12
-        width: 13
+        x: 10
+        y: 43
+        width: 12
         height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -543,7 +555,7 @@ TextureImporter:
       name: dustcreature_16
       rect:
         serializedVersion: 2
-        x: 138
+        x: 10
         y: 12
         width: 13
         height: 11
@@ -565,7 +577,7 @@ TextureImporter:
       name: dustcreature_17
       rect:
         serializedVersion: 2
-        x: 170
+        x: 42
         y: 12
         width: 13
         height: 11
@@ -587,10 +599,10 @@ TextureImporter:
       name: dustcreature_18
       rect:
         serializedVersion: 2
-        x: 202
-        y: 8
+        x: 74
+        y: 12
         width: 13
-        height: 16
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -609,10 +621,10 @@ TextureImporter:
       name: dustcreature_19
       rect:
         serializedVersion: 2
-        x: 234
-        y: 3
+        x: 106
+        y: 12
         width: 13
-        height: 21
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -631,10 +643,10 @@ TextureImporter:
       name: dustcreature_20
       rect:
         serializedVersion: 2
-        x: 266
-        y: 1
-        width: 14
-        height: 22
+        x: 138
+        y: 12
+        width: 13
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -653,10 +665,10 @@ TextureImporter:
       name: dustcreature_21
       rect:
         serializedVersion: 2
-        x: 298
-        y: 1
-        width: 14
-        height: 22
+        x: 170
+        y: 12
+        width: 13
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -675,10 +687,10 @@ TextureImporter:
       name: dustcreature_22
       rect:
         serializedVersion: 2
-        x: 329
-        y: 1
-        width: 15
-        height: 12
+        x: 202
+        y: 8
+        width: 13
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -697,10 +709,10 @@ TextureImporter:
       name: dustcreature_23
       rect:
         serializedVersion: 2
-        x: 394
-        y: 2
-        width: 12
-        height: 10
+        x: 234
+        y: 3
+        width: 13
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -719,10 +731,10 @@ TextureImporter:
       name: dustcreature_24
       rect:
         serializedVersion: 2
-        x: 426
-        y: 9
-        width: 12
-        height: 10
+        x: 266
+        y: 1
+        width: 14
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -741,6 +753,94 @@ TextureImporter:
       name: dustcreature_25
       rect:
         serializedVersion: 2
+        x: 298
+        y: 1
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83d8547ed80060150800000000000000
+      internalID: 5838354576402910520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dustcreature_26
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ed8832814b809a40800000000000000
+      internalID: 5372947468926881257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dustcreature_27
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 2
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d5111185d0f70c20800000000000000
+      internalID: 3172769262289884633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dustcreature_28
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 9
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc27ca2226934efe0800000000000000
+      internalID: -1160739710303440177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dustcreature_29
+      rect:
+        serializedVersion: 2
         x: 362
         y: 0
         width: 12
@@ -753,8 +853,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 83d8547ed80060150800000000000000
-      internalID: 5838354576402910520
+      spriteID: b6da3bb89310c08e0800000000000000
+      internalID: -1726003210521170581
       vertices: []
       indices: 
       edges: []
@@ -792,6 +892,10 @@ TextureImporter:
       dustcreature_23: -7592002406746161967
       dustcreature_24: 4781527467887895729
       dustcreature_25: 5838354576402910520
+      dustcreature_26: 5372947468926881257
+      dustcreature_27: 3172769262289884633
+      dustcreature_28: -1160739710303440177
+      dustcreature_29: -1726003210521170581
       dustcreature_3: 7815913534736302576
       dustcreature_4: 3076334936300287495
       dustcreature_5: -4483366191500438724
