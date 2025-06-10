@@ -1,0 +1,806 @@
+fileFormatVersion: 2
+guid: 28950227b629b634caf6f5c01a80d192
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6493078260486401797
+    second: dustcreature_0
+  - first:
+      213: 6501605542871515996
+    second: dustcreature_1
+  - first:
+      213: -6559441532719932722
+    second: dustcreature_2
+  - first:
+      213: 7815913534736302576
+    second: dustcreature_3
+  - first:
+      213: 3076334936300287495
+    second: dustcreature_4
+  - first:
+      213: -4483366191500438724
+    second: dustcreature_5
+  - first:
+      213: -15300147730799552
+    second: dustcreature_6
+  - first:
+      213: -1622989080968692196
+    second: dustcreature_7
+  - first:
+      213: 7262306829187977379
+    second: dustcreature_8
+  - first:
+      213: 3008481781724252841
+    second: dustcreature_9
+  - first:
+      213: -4796058020608241319
+    second: dustcreature_10
+  - first:
+      213: 4822582358641807427
+    second: dustcreature_11
+  - first:
+      213: -2523991096614302384
+    second: dustcreature_12
+  - first:
+      213: 6250911334233978123
+    second: dustcreature_13
+  - first:
+      213: 9221377946459907100
+    second: dustcreature_14
+  - first:
+      213: -6499618965354000656
+    second: dustcreature_15
+  - first:
+      213: -3110218592988810442
+    second: dustcreature_16
+  - first:
+      213: -2602572166826932649
+    second: dustcreature_17
+  - first:
+      213: 1660678185110314099
+    second: dustcreature_18
+  - first:
+      213: -5027859569443279067
+    second: dustcreature_19
+  - first:
+      213: 2742639433005184511
+    second: dustcreature_20
+  - first:
+      213: 7260813378821721289
+    second: dustcreature_21
+  - first:
+      213: 6303080471224837816
+    second: dustcreature_22
+  - first:
+      213: -7592002406746161967
+    second: dustcreature_23
+  - first:
+      213: 4781527467887895729
+    second: dustcreature_24
+  - first:
+      213: 5838354576402910520
+    second: dustcreature_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dustcreature_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 43
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50f6a1fa64c0c1a50800000000000000
+      internalID: 6493078260486401797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dustcreature_1
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 43
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5341945bc75a3a50800000000000000
+      internalID: 6501605542871515996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dustcreature_2
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 43
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecad84dedae28f4a0800000000000000
+      internalID: -6559441532719932722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dustcreature_3
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 44
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f1002903f3b77c60800000000000000
+      internalID: 7815913534736302576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dustcreature_4
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 43
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7067d40535651ba20800000000000000
+      internalID: 3076334936300287495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dustcreature_5
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 44
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c33de95e332e7c1c0800000000000000
+      internalID: -4483366191500438724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dustcreature_6
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 43
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 044ae71c894a9cff0800000000000000
+      internalID: -15300147730799552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dustcreature_7
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 43
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1ef582a70cf979e0800000000000000
+      internalID: -1622989080968692196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dustcreature_8
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 43
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a094a37595e8c460800000000000000
+      internalID: 7262306829187977379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dustcreature_9
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 43
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aa88e8ad3640c920800000000000000
+      internalID: 3008481781724252841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dustcreature_10
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 43
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9519b7f04aaf07db0800000000000000
+      internalID: -4796058020608241319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dustcreature_11
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 43
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34019e2aa114de240800000000000000
+      internalID: 4822582358641807427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dustcreature_12
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 12
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05d4e06687bf8fcd0800000000000000
+      internalID: -2523991096614302384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dustcreature_13
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 12
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b05ba7f5db2bfb650800000000000000
+      internalID: 6250911334233978123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dustcreature_14
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 12
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c142d56a26ae8ff70800000000000000
+      internalID: 9221377946459907100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dustcreature_15
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 12
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0feceaaccf6bcc5a0800000000000000
+      internalID: -6499618965354000656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dustcreature_16
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 12
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63336171ba846d4d0800000000000000
+      internalID: -3110218592988810442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dustcreature_17
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 12
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75646fd376ec1ebd0800000000000000
+      internalID: -2602572166826932649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dustcreature_18
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 8
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37c9dbdb20aeb0710800000000000000
+      internalID: 1660678185110314099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dustcreature_19
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 3
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52fe8ce3c54793ab0800000000000000
+      internalID: -5027859569443279067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dustcreature_20
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff5b04f7800df0620800000000000000
+      internalID: 2742639433005184511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dustcreature_21
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 1
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cc82117c4793c460800000000000000
+      internalID: 7260813378821721289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dustcreature_22
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b6ee0e1b4a097750800000000000000
+      internalID: 6303080471224837816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dustcreature_23
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 2
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dcfbf3090ac3a690800000000000000
+      internalID: -7592002406746161967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dustcreature_24
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 9
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b42b3ff5e56b5240800000000000000
+      internalID: 4781527467887895729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dustcreature_25
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 0
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83d8547ed80060150800000000000000
+      internalID: 5838354576402910520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      dustcreature_0: 6493078260486401797
+      dustcreature_1: 6501605542871515996
+      dustcreature_10: -4796058020608241319
+      dustcreature_11: 4822582358641807427
+      dustcreature_12: -2523991096614302384
+      dustcreature_13: 6250911334233978123
+      dustcreature_14: 9221377946459907100
+      dustcreature_15: -6499618965354000656
+      dustcreature_16: -3110218592988810442
+      dustcreature_17: -2602572166826932649
+      dustcreature_18: 1660678185110314099
+      dustcreature_19: -5027859569443279067
+      dustcreature_2: -6559441532719932722
+      dustcreature_20: 2742639433005184511
+      dustcreature_21: 7260813378821721289
+      dustcreature_22: 6303080471224837816
+      dustcreature_23: -7592002406746161967
+      dustcreature_24: 4781527467887895729
+      dustcreature_25: 5838354576402910520
+      dustcreature_3: 7815913534736302576
+      dustcreature_4: 3076334936300287495
+      dustcreature_5: -4483366191500438724
+      dustcreature_6: -15300147730799552
+      dustcreature_7: -1622989080968692196
+      dustcreature_8: 7262306829187977379
+      dustcreature_9: 3008481781724252841
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
