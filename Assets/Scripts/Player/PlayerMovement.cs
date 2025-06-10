@@ -10,8 +10,36 @@ public class PlayerMovement : MonoBehaviour
     public LineRenderer lineRenderer;
     public bool isMovingVert = false;
     public bool isMovingHorz = false;
+    public float dashSpeed = 10f; // Placeholder for dash speed, not implemented yet    
+
+    public float rotationAngle = 0f;
+    public float dashDuration = 0.2f; // Placeholder for dash duration, not implemented yet
+    public float dashCooldown = 1f; // Placeholder for dash cooldown, not implemented yet
+
+    public float shootCooldown = 0.5f; // Placeholder for shoot cooldown, not implemented yet
+    public float shootRange = 30f; // Placeholder for shoot range, not implemented yet
+
+    public float shotDuration = 0.05f;
+    public float shotCooldown = 0.5f; // Placeholder for shot cooldown, not implemented yet
+    public float reloadTime = 2f;
+    public bool isReloading = false; // Placeholder for reloading state, not implemented yet
+    public int maxAmmo = 10; // Placeholder for maximum ammo, not implemented yet
+    public int currentAmmo = 10; // Placeholder for current ammo, not implemented yet
+
+    public Transform shootPoint; // Placeholder for shoot point, not implemented yet
+
+    public enum PlayerState
+    {
+        Idle,
+        Moving,
+        Shooting,
+        Dashing
+    }
+    public PlayerState playerState = PlayerState.Idle;
+
 
     private KeyCode ShootKey = KeyCode.Mouse0;
+    private KeyCode DashKey = KeyCode.Space; // Placeholder for dash key, not implemented yet
     public LayerMask enemyLayer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -30,21 +58,55 @@ public class PlayerMovement : MonoBehaviour
         isMovingVert = movement.y != 0;
 
 
+        if (isMovingHorz && isMovingVert)
+        {
+            movement.Normalize(); // Normalize diagonal movement to maintain speed
+        }
 
-        plrTransform.position += new Vector3(movement.x, movement.y, 0) * speed * Time.deltaTime;
-        RotateToMouse();
+        if (movement.x != 0 || movement.y != 0 && (playerState != PlayerState.Shooting || playerState != PlayerState.Dashing))
+        {
+            playerState = PlayerState.Moving;
+        }
+        else
+        {
+            playerState = PlayerState.Idle; // Player is idle
+        }
 
         if (Input.GetKeyDown(ShootKey))
         {
+            if (playerState == PlayerState.Shooting || playerState == PlayerState.Dashing || isReloading || currentAmmo <= 0)
+            {
+                return; // Prevent shooting while already shooting or dashing
+            }
             Shoot();
+            currentAmmo--;
+            if (currentAmmo <= 0)
+            {
+                Invoke("Reload", 0.5f); // Automatically reload if ammo is depleted
+            }
+            playerState = PlayerState.Shooting; // Set state to Shooting when the player shoots
         }
+
+        if (Input.GetKeyDown(DashKey))
+        {
+            Dash();
+            playerState = PlayerState.Dashing; // Set state to Dashing when the player dashes
+        }
+        if (playerState != PlayerState.Dashing && playerState != PlayerState.Shooting)
+        {
+            plrTransform.position += new Vector3(movement.x, movement.y, 0) * speed * Time.deltaTime;
+            RotateToMouse();
+        }
+
+
+
     }
 
     private void RotateToMouse()
     {
         Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         Vector2 direction = mousePosition - transform.position;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + rotationAngle;
         Quaternion targetRotation = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
@@ -52,20 +114,20 @@ public class PlayerMovement : MonoBehaviour
 
     private void Shoot()
     {
-        RaycastHit2D hit = Physics2D.Raycast(plrTransform.position, plrTransform.up, 30f, enemyLayer);
-        ShowLaser(plrTransform.position, plrTransform.position + plrTransform.up * 30f);
+        RaycastHit2D hit = Physics2D.Raycast(shootPoint.position, shootPoint.up * -1, 30f, enemyLayer);
+        ShowLaser(shootPoint.position, shootPoint.position + shootPoint.up * -1 * 30f);
         if (hit.collider != null)
         {
             Debug.Log("Hit: " + hit.collider.name);
             int hitLayer = hit.collider.gameObject.layer;
             string layerName = LayerMask.LayerToName(hitLayer);
-            if ( layerName == "Enemy")
+            if (layerName == "Enemy")
             {
-                
+
                 Destroy(hit.collider.gameObject); // Assuming the enemy has a script that handles its destruction
             }
-            
-            
+
+
         }
         else
         {
@@ -85,5 +147,27 @@ public class PlayerMovement : MonoBehaviour
     private void HideLaser()
     {
         lineRenderer.enabled = false;
+        playerState = PlayerState.Idle; // Reset state to Idle after shooting
+    }
+
+    private void Dash()
+    {
+
+    }
+
+    private void Reload()
+    {
+        if (isReloading || currentAmmo >= maxAmmo)
+        {
+            return; // Prevent reloading if already reloading or ammo is full
+        }
+        isReloading = true;
+        Invoke("FinishReload", reloadTime);
+    }
+
+    private void FinishReload()
+    {
+        currentAmmo = maxAmmo; // Reset current ammo to max ammo
+        isReloading = false; // Reset reloading state
     }
 }
