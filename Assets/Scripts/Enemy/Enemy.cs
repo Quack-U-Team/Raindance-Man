@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
     bool avoidingObstacle = false;
     bool playerAlive = true;
 
-    Transform target;
+    public Transform target;
     Rigidbody2D rb;
 
     Vector2 movement;
@@ -176,7 +176,7 @@ public class Enemy : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Destroy(collision.gameObject);
+           collision.gameObject.SetActive(false);
         }
     }
 
@@ -204,4 +204,6 @@ public class Enemy : MonoBehaviour
 
         isDashing = false;
     }
+
+
 }

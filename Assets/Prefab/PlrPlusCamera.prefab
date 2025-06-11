@@ -292,8 +292,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7626667826093941411, guid: 6a80614b938f014448b56b6aeb917664, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7802231371606752295, guid: 6a80614b938f014448b56b6aeb917664, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802231371606752295, guid: 6a80614b938f014448b56b6aeb917664, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8360132960445497041, guid: 6a80614b938f014448b56b6aeb917664, type: 3}
@@ -303,6 +311,18 @@ PrefabInstance:
     - target: {fileID: 8360132960445497041, guid: 6a80614b938f014448b56b6aeb917664, type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
       value: 0.03150028
+      objectReference: {fileID: 0}
+    - target: {fileID: 9201406229275218975, guid: 6a80614b938f014448b56b6aeb917664, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9201406229275218975, guid: 6a80614b938f014448b56b6aeb917664, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9201406229275218975, guid: 6a80614b938f014448b56b6aeb917664, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
