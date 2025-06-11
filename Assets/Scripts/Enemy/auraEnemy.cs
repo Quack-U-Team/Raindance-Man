@@ -3,9 +3,10 @@ using UnityEngine;
 public class auraEnemy : MonoBehaviour
 {
     public float refreshAIcooldown = 0.1f;
-    public float followRange = 5f;
-    public float speed = 1f;
+    public float followRange = 3f;
+    public float speed = 8f;
     public float stopDistance = 0.4f;
+    public float coolDownAnsia = 5;
 
     bool avoidingObstacle = false;
     bool playerAlive = true;
@@ -14,6 +15,8 @@ public class auraEnemy : MonoBehaviour
 
     public Transform target;
     public Vector3 targetPosition;
+
+    PlayerMovement playerScript;
 
     Vector2 movement;
     Vector2 avoidanceDirection = Vector2.zero;
@@ -109,7 +112,15 @@ public class auraEnemy : MonoBehaviour
                 if (distance < stopDistance)
                 {
                     movement = Vector2.zero;
-                    return;
+
+                    for (int i = 0; i < coolDownAnsia; i++)
+                    {
+                        if (playerScript != null)
+                        {
+                            playerScript.ansia = true;
+                        }
+                        return;
+                    }
                 }
             }
         }
