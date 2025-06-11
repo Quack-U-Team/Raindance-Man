@@ -26,6 +26,12 @@ public class PlayerMovement : MonoBehaviour
     public int maxAmmo = 10; // Placeholder for maximum ammo, not implemented yet
     public int currentAmmo = 10; // Placeholder for current ammo, not implemented yet
 
+    public bool ansia = false;
+    public bool depressione = false;
+    public bool schizofrenia = false;
+    public bool morto = false;
+    
+
     public Transform shootPoint; // Placeholder for shoot point, not implemented yet
 
     public enum PlayerState
