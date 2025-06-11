@@ -6,6 +6,7 @@ public class Chain : MonoBehaviour
     public float speed = 10;
     public Vector3 direction;
 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
