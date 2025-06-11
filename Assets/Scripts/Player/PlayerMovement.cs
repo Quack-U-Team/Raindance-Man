@@ -10,10 +10,10 @@ public class PlayerMovement : MonoBehaviour
     public LineRenderer lineRenderer;
     public bool isMovingVert = false;
     public bool isMovingHorz = false;
-    public float dashSpeed = 10f; // Placeholder for dash speed, not implemented yet    
+    public float dashSpeed = 500f; // Placeholder for dash speed, not implemented yet    
 
     public float rotationAngle = 0f;
-    public float dashDuration = 0.2f; // Placeholder for dash duration, not implemented yet
+    public float dashDuration = 1f; // Placeholder for dash duration, not implemented yet
     public float dashCooldown = 1f; // Placeholder for dash cooldown, not implemented yet
 
     public float shootCooldown = 0.5f; // Placeholder for shoot cooldown, not implemented yet
@@ -30,7 +30,11 @@ public class PlayerMovement : MonoBehaviour
     public bool depressione = false;
     public bool schizofrenia = false;
     public bool morto = false;
-    
+
+    public Rigidbody2D rb;
+
+    private string lastDirection = "none"; // Placeholder for last direction, not implemented yet
+
 
     public Transform shootPoint; // Placeholder for shoot point, not implemented yet
 
@@ -51,7 +55,8 @@ public class PlayerMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        Time.fixedDeltaTime = 0.016f; // ~60 FixedUpdates/sec (anziché 50)
+    
     }
 
     // Update is called once per frame
@@ -60,8 +65,37 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal"); // A e D
         movement.y = Input.GetAxisRaw("Vertical");   // W e S
 
-        isMovingHorz = movement.x != 0;
-        isMovingVert = movement.y != 0;
+       
+            isMovingHorz = movement.x != 0;
+            isMovingVert = movement.y != 0;
+
+        if (isMovingHorz)
+        {
+            lastDirection = movement.x > 0 ? "right" : "left"; // Update last direction based on horizontal movement
+        }
+        if (isMovingVert)
+        {
+            lastDirection = movement.y > 0 ? "up" : "down"; // Update last direction based on vertical movement
+        }
+        if (isMovingHorz && isMovingVert) {
+            if (movement.x>0 && movement.y >0)
+            {
+                lastDirection = "up-right"; // Update last direction for diagonal movement
+            }
+            else if (movement.x < 0 && movement.y > 0)
+            {
+                lastDirection = "up-left"; // Update last direction for diagonal movement
+            }
+            else if (movement.x < 0 && movement.y < 0)
+            {
+                lastDirection = "down-left"; // Update last direction for diagonal movement
+            }
+            else if (movement.x > 0 && movement.y < 0)
+            {
+                lastDirection = "down-right"; // Update last direction for diagonal movement
+            }
+        }
+
 
 
         if (isMovingHorz && isMovingVert)
@@ -95,18 +129,29 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(DashKey))
         {
-            Dash();
+            if (playerState == PlayerState.Dashing || playerState == PlayerState.Shooting || isReloading)
+            {
+                return; // Prevent dashing while already dashing or shooting
+            }
+            //Dash();
             playerState = PlayerState.Dashing; // Set state to Dashing when the player dashes
+            Invoke("setIdleState", dashDuration); // Reset state to Idle after dash duration
+
         }
-        if (playerState != PlayerState.Dashing && playerState != PlayerState.Shooting)
+        if (playerState != PlayerState.Dashing )
         {
-            plrTransform.position += new Vector3(movement.x, movement.y, 0) * speed * Time.deltaTime;
+           
+            //plrTransform.position += new Vector3(movement.x, movement.y, 0) * speed * Time.deltaTime;
             RotateToMouse();
         }
+        if (playerState == PlayerState.Dashing)
+        {
+            Dash();
+        }
 
 
 
-    }
+        }
 
     private void RotateToMouse()
     {
@@ -158,6 +203,40 @@ public class PlayerMovement : MonoBehaviour
 
     private void Dash()
     {
+        print(lastDirection);
+        if (lastDirection == "up")
+        {
+            plrTransform.position += Vector3.up * dashSpeed * Time.deltaTime;
+        }
+        else if (lastDirection == "down")
+        {
+            plrTransform.position += Vector3.down * dashSpeed * Time.deltaTime;
+        }
+        else if (lastDirection == "left")
+        {
+            plrTransform.position += Vector3.left * dashSpeed * Time.deltaTime;
+        }
+        else if (lastDirection == "right")
+        {
+            plrTransform.position += Vector3.right * dashSpeed * Time.deltaTime;
+        }
+        else if (lastDirection == "up-right")
+        {
+            plrTransform.position += (Vector3.up + Vector3.right).normalized * dashSpeed * Time.deltaTime;
+        }
+        else if (lastDirection == "up-left")
+        {
+            plrTransform.position += (Vector3.up + Vector3.left).normalized * dashSpeed * Time.deltaTime;
+        }
+        else if (lastDirection == "down-left")
+        {
+            plrTransform.position += (Vector3.down + Vector3.left).normalized * dashSpeed * Time.deltaTime;
+        }
+        else if (lastDirection == "down-right")
+        {
+            plrTransform.position += (Vector3.down + Vector3.right).normalized * dashSpeed * Time.deltaTime;
+        }
+
 
     }
 
@@ -175,5 +254,19 @@ public class PlayerMovement : MonoBehaviour
     {
         currentAmmo = maxAmmo; // Reset current ammo to max ammo
         isReloading = false; // Reset reloading state
+    }
+
+    private void setIdleState()
+    {
+        playerState = PlayerState.Idle; // Set the player state to Idle
+    }
+
+    void FixedUpdate()
+    {
+        movement.x *= speed * Time.fixedDeltaTime; // Scale movement by speed and fixed delta time
+        movement.y *= speed * Time.fixedDeltaTime; // Scale movement by speed and fixed delta time
+        // Applica il movimento in FixedUpdate (fisica stabile)
+        //rb.MovePosition(plrTransform.position +  new Vector3(movement.x, movement.y, 0) * speed * Time.fixedDeltaTime); // Move the player based on input
+        rb.linearVelocity = new Vector2(movement.x, movement.y);
     }
 }
