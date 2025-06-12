@@ -37,7 +37,8 @@ public class PlayerMovement : MonoBehaviour
 
 
     public Transform shootPoint; // Placeholder for shoot point, not implemented yet
-
+    private float depresSpeed = 1f; // Placeholder for depression speed, not implemented yet
+    public float depresSpeedBase = 0.5f; // Placeholder for base depression speed, not implemented yet
     public enum PlayerState
     {
         Idle,
@@ -74,17 +75,24 @@ public class PlayerMovement : MonoBehaviour
         isMovingHorz = movement.x != 0;
         isMovingVert = movement.y != 0;
 
-
-
-
-        if ((movement.x != 0 || movement.y != 0) && ( playerState != PlayerState.Dashing && playerState != PlayerState.Moving))
+        if (depressione)
         {
-            playerState = PlayerState.Moving;
+            depresSpeed = depresSpeedBase; // Set depression speed to base value
         }
-        else if (playerState != PlayerState.Dashing && playerState != PlayerState.Shooting)
+        else
+        {
+            depresSpeed = 1f; // Reset depression speed if not depressed
+        }
+
+        if ((movement.x == 0 && movement.y == 0) && playerState != PlayerState.Dashing && playerState != PlayerState.Shooting)
         {
             playerState = PlayerState.Idle; // Player is idle
         }
+        else if ((movement.x != 0 || movement.y != 0) && (playerState != PlayerState.Dashing && playerState != PlayerState.Moving))
+        {
+            playerState = PlayerState.Moving;
+        }
+        
 
         if (Input.GetKeyDown(ShootKey))
         {
@@ -212,8 +220,11 @@ public class PlayerMovement : MonoBehaviour
             movement.x *= dashSpeed;
             movement.y *= dashSpeed; // Apply dash speed to movement
         }
-        // Applica il movimento in FixedUpdate (fisica stabile)
-        //rb.MovePosition(plrTransform.position +  new Vector3(movement.x, movement.y, 0) * speed * Time.fixedDeltaTime); // Move the player based on input
-        rb.linearVelocity = new Vector2(movement.x * speed, movement.y * speed);
+        
+
+
+        rb.linearVelocity = new Vector2(movement.x * speed *depresSpeed, movement.y * speed * depresSpeed);
+       
+     
     }
 }
