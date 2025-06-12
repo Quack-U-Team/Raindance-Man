@@ -9,7 +9,7 @@ public class StartMenu : MonoBehaviour
     public Slider SoundtrackSlider;
     public Slider SFXSlider;
 
-    private void Start()
+    public void CheckVolumeLevels()
     {
         if (PlayerPrefs.GetInt("soundtrack_volume_set") == 1)
         {
@@ -19,6 +19,13 @@ public class StartMenu : MonoBehaviour
         {
             SFXSlider.value = PlayerPrefs.GetFloat("sfx_volume");
         }
+    }
+
+    private void Start()
+    {
+        Time.timeScale = 1f;
+
+        CheckVolumeLevels();
     }
 
     public void StartGame(int i)
