@@ -1,16 +1,27 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class Candle : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private Light2D candleLight;
+    public float flickerAmount = 0.2f;
+    public float flickerSpeed = 0.3f;
+    private float baseIntensity;
+
     void Start()
     {
-        
+        candleLight = GetComponent<Light2D>();
+        if (candleLight != null)
+        {
+            baseIntensity = candleLight.intensity;
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (candleLight != null)
+        {
+            candleLight.intensity = baseIntensity + Mathf.Sin(Time.time * flickerSpeed) * flickerAmount;
+        }
     }
 }

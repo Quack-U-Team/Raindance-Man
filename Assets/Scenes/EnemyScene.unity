@@ -119,14 +119,41 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &460993470 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7234459598040503182, guid: e127ff3a9f7889043ae94c3901381313, type: 3}
+  m_PrefabInstance: {fileID: 4183983929549372478}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &460993474
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460993470}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!4 &780395523 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4147335099247417500, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
-  m_PrefabInstance: {fileID: 1102262640}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &976426152 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 7655531103190007733, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
   m_PrefabInstance: {fileID: 1102262640}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1102262640
@@ -138,12 +165,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3640324842275185482, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
-      propertyPath: rb
-      value: 
-      objectReference: {fileID: 976426152}
-    - target: {fileID: 3640324842275185482, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
-      propertyPath: speed
-      value: 80
+      propertyPath: morto
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4705800206845503935, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
       propertyPath: m_Name
@@ -208,7 +231,7 @@ GameObject:
   - component: {fileID: 1661167179}
   m_Layer: 10
   m_Name: Obstacles2
-  m_TagString: Untagged
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -291,7 +314,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1661167174}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -309,7 +332,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!61 &1661167179
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -370,7 +393,7 @@ GameObject:
   - component: {fileID: 2078052780}
   m_Layer: 10
   m_Name: Obstacles1
-  m_TagString: Untagged
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -453,7 +476,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2078052775}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -471,7 +494,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!61 &2078052780
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -749,22 +772,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6565354811395791393, guid: e127ff3a9f7889043ae94c3901381313, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.22
+    - target: {fileID: 6616882166126424822, guid: e127ff3a9f7889043ae94c3901381313, type: 3}
+      propertyPath: m_BodyType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7140616978935222924, guid: e127ff3a9f7889043ae94c3901381313, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 780395523}
     - target: {fileID: 7234459598040503182, guid: e127ff3a9f7889043ae94c3901381313, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      propertyPath: m_TagString
+      value: vcx
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7234459598040503182, guid: e127ff3a9f7889043ae94c3901381313, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 460993474}
   m_SourcePrefab: {fileID: 100100000, guid: e127ff3a9f7889043ae94c3901381313, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

@@ -26,9 +26,9 @@ public class Chain : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             IHittable hittable = collision.gameObject.GetComponent<IHittable>();
             if (hittable != null)
@@ -36,6 +36,11 @@ public class Chain : MonoBehaviour
                 hittable.OnHitSuffered();
             }
 
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("Obstacles"))
+        {
             Destroy(gameObject);
         }
     }
