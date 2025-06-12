@@ -18,6 +18,8 @@ public class Enemy : MonoBehaviour
     public Transform target;
     Rigidbody2D rb;
 
+    PlayerMovement playerScript;
+
     Vector2 movement;
     Vector2 avoidanceDirection = Vector2.zero;
 
@@ -37,8 +39,7 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-
-        InvokeRepeating(nameof(RefreshAI), 0, refreshAIcooldown);
+            InvokeRepeating(nameof(RefreshAI), 0, refreshAIcooldown);
     }
 
 
@@ -68,6 +69,7 @@ public class Enemy : MonoBehaviour
             movement = Vector2.zero;
             return;
         }
+
 
         float distance = Vector2.Distance(transform.position, target.position);
 
@@ -170,6 +172,7 @@ public class Enemy : MonoBehaviour
                 movement = avoidanceDirection;
             }
         }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -177,6 +180,7 @@ public class Enemy : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
            collision.gameObject.SetActive(false);
+           playerScript.morto = true;
         }
     }
 
