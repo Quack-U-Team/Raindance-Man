@@ -263,10 +263,10 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        movement.x *= speed * Time.fixedDeltaTime; // Scale movement by speed and fixed delta time
-        movement.y *= speed * Time.fixedDeltaTime; // Scale movement by speed and fixed delta time
+        movement.x *= speed; // Scale movement by speed and fixed delta time
+        movement.y *= speed; // Scale movement by speed and fixed delta time
         // Applica il movimento in FixedUpdate (fisica stabile)
         //rb.MovePosition(plrTransform.position +  new Vector3(movement.x, movement.y, 0) * speed * Time.fixedDeltaTime); // Move the player based on input
-        rb.linearVelocity = new Vector2(movement.x, movement.y);
+        rb.linearVelocity = new Vector2(movement.x * speed, movement.y * speed);
     }
 }

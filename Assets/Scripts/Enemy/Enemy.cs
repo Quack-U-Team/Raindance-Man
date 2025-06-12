@@ -34,6 +34,7 @@ public class Enemy : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         obstacleLayer = LayerMask.GetMask("Obstacles");
+
     }
 
 
@@ -175,12 +176,11 @@ public class Enemy : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-           collision.gameObject.SetActive(false);
-           playerScript.morto = true;
+           Destroy(collision.gameObject);
         }
     }
 
