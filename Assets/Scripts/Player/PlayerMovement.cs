@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody2D rb;
 
-    private string lastDirection = "none"; // Placeholder for last direction, not implemented yet
+    public bool canDash = true;
 
 
     public Transform shootPoint; // Placeholder for shoot point, not implemented yet
@@ -108,9 +108,14 @@ public class PlayerMovement : MonoBehaviour
             {
                 return; // Prevent dashing while already dashing or shooting
             }
-            
+            if (!canDash)
+            {
+                return; // Prevent dashing if dash is on cooldown
+            }
             playerState = PlayerState.Dashing; // Set state to Dashing when the player dashes
+            canDash = false; // Set dash cooldown
             Invoke("setIdleState", dashDuration); // Reset state to Idle after dash duration
+            Invoke("DashCooldownReset", dashDuration+dashCooldown); // Reset dash cooldown
 
         }
         if (playerState != PlayerState.Dashing )
@@ -132,6 +137,10 @@ public class PlayerMovement : MonoBehaviour
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
 
+    private void DashCooldownReset()
+    {
+        canDash = true; // Reset dash cooldown
+    }
 
     private void Shoot()
     {
