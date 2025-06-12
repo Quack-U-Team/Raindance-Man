@@ -51,6 +51,7 @@ MonoBehaviour:
   followRange: 5
   speed: 1
   stopDistance: 0.4
+  coolDownAnsia: 5
   target: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
 --- !u!50 &733019823905796364
