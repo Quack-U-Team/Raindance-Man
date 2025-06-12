@@ -54,11 +54,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Density: 17
+    - _Density: 24
     - _EnableExternalAlpha: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Speed: 3
+    - _Speed: 2
     - _ZWrite: 0
     m_Colors:
     - _BaseColor: {r: 0.3031685, g: 0.16069373, b: 0.78616345, a: 1}

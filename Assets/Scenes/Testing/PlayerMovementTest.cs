@@ -19,10 +19,12 @@ public class PlayerMovementTest : MonoBehaviour
     private void FixedUpdate()
     {
         rb.linearVelocity = new Vector2(inputX * speed, inputY * speed);
+        //Vector2 targetPos = new Vector2(transform.position.x + inputX * speed, transform.position.y + inputY * speed);
+        //rb.MovePosition(targetPos);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        print("ora spiegami com'è possibile che detecti la collisione ma non fermi il personaggio");
+        print("in cucina come i froci");
     }
 }
