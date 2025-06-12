@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     private KeyCode ShootKey = KeyCode.Mouse0;
-    private KeyCode DashKey = KeyCode.Space; // Placeholder for dash key, not implemented yet
+    private KeyCode DashKey = KeyCode.Space; 
     public LayerMask enemyLayer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -62,52 +62,26 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal"); // A e D
-        movement.y = Input.GetAxisRaw("Vertical");   // W e S
-
-       
-            isMovingHorz = movement.x != 0;
-            isMovingVert = movement.y != 0;
-
-        if (isMovingHorz)
+        if (playerState != PlayerState.Dashing )
         {
-            lastDirection = movement.x > 0 ? "right" : "left"; // Update last direction based on horizontal movement
+            movement.x = Input.GetAxisRaw("Horizontal"); // A e D
+            movement.y = Input.GetAxisRaw("Vertical");   // W e S
+            
         }
-        if (isMovingVert)
-        {
-            lastDirection = movement.y > 0 ? "up" : "down"; // Update last direction based on vertical movement
-        }
-        if (isMovingHorz && isMovingVert) {
-            if (movement.x>0 && movement.y >0)
-            {
-                lastDirection = "up-right"; // Update last direction for diagonal movement
-            }
-            else if (movement.x < 0 && movement.y > 0)
-            {
-                lastDirection = "up-left"; // Update last direction for diagonal movement
-            }
-            else if (movement.x < 0 && movement.y < 0)
-            {
-                lastDirection = "down-left"; // Update last direction for diagonal movement
-            }
-            else if (movement.x > 0 && movement.y < 0)
-            {
-                lastDirection = "down-right"; // Update last direction for diagonal movement
-            }
-        }
+        movement.Normalize(); // Normalize diagonal movement to maintain speed
+
+
+        isMovingHorz = movement.x != 0;
+        isMovingVert = movement.y != 0;
 
 
 
-        if (isMovingHorz && isMovingVert)
-        {
-            movement.Normalize(); // Normalize diagonal movement to maintain speed
-        }
 
-        if (movement.x != 0 || movement.y != 0 && (playerState != PlayerState.Shooting || playerState != PlayerState.Dashing))
+        if ((movement.x != 0 || movement.y != 0) && ( playerState != PlayerState.Dashing && playerState != PlayerState.Moving))
         {
             playerState = PlayerState.Moving;
         }
-        else
+        else if (playerState != PlayerState.Dashing && playerState != PlayerState.Shooting)
         {
             playerState = PlayerState.Idle; // Player is idle
         }
@@ -129,25 +103,21 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(DashKey))
         {
+            print("DASH PRESSED");
             if (playerState == PlayerState.Dashing || playerState == PlayerState.Shooting || isReloading)
             {
                 return; // Prevent dashing while already dashing or shooting
             }
-            //Dash();
+            
             playerState = PlayerState.Dashing; // Set state to Dashing when the player dashes
             Invoke("setIdleState", dashDuration); // Reset state to Idle after dash duration
 
         }
         if (playerState != PlayerState.Dashing )
         {
-           
-            //plrTransform.position += new Vector3(movement.x, movement.y, 0) * speed * Time.deltaTime;
             RotateToMouse();
         }
-        if (playerState == PlayerState.Dashing)
-        {
-            Dash();
-        }
+      
 
 
 
@@ -201,44 +171,7 @@ public class PlayerMovement : MonoBehaviour
         playerState = PlayerState.Idle; // Reset state to Idle after shooting
     }
 
-    private void Dash()
-    {
-        print(lastDirection);
-        if (lastDirection == "up")
-        {
-            plrTransform.position += Vector3.up * dashSpeed * Time.deltaTime;
-        }
-        else if (lastDirection == "down")
-        {
-            plrTransform.position += Vector3.down * dashSpeed * Time.deltaTime;
-        }
-        else if (lastDirection == "left")
-        {
-            plrTransform.position += Vector3.left * dashSpeed * Time.deltaTime;
-        }
-        else if (lastDirection == "right")
-        {
-            plrTransform.position += Vector3.right * dashSpeed * Time.deltaTime;
-        }
-        else if (lastDirection == "up-right")
-        {
-            plrTransform.position += (Vector3.up + Vector3.right).normalized * dashSpeed * Time.deltaTime;
-        }
-        else if (lastDirection == "up-left")
-        {
-            plrTransform.position += (Vector3.up + Vector3.left).normalized * dashSpeed * Time.deltaTime;
-        }
-        else if (lastDirection == "down-left")
-        {
-            plrTransform.position += (Vector3.down + Vector3.left).normalized * dashSpeed * Time.deltaTime;
-        }
-        else if (lastDirection == "down-right")
-        {
-            plrTransform.position += (Vector3.down + Vector3.right).normalized * dashSpeed * Time.deltaTime;
-        }
-
-
-    }
+    
 
     private void Reload()
     {
@@ -265,6 +198,11 @@ public class PlayerMovement : MonoBehaviour
     {
         movement.x *= speed; // Scale movement by speed and fixed delta time
         movement.y *= speed; // Scale movement by speed and fixed delta time
+        if (playerState == PlayerState.Dashing)
+        {
+            movement.x *= dashSpeed;
+            movement.y *= dashSpeed; // Apply dash speed to movement
+        }
         // Applica il movimento in FixedUpdate (fisica stabile)
         //rb.MovePosition(plrTransform.position +  new Vector3(movement.x, movement.y, 0) * speed * Time.fixedDeltaTime); // Move the player based on input
         rb.linearVelocity = new Vector2(movement.x * speed, movement.y * speed);

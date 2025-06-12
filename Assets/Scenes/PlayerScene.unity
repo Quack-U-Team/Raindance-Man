@@ -281,11 +281,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &575086153 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 7655531103190007733, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
-  m_PrefabInstance: {fileID: 7513435409350434337}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1719393991
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,32 +424,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3640324842275185482, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
-      propertyPath: rb
-      value: 
-      objectReference: {fileID: 575086153}
-    - target: {fileID: 3640324842275185482, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
-      propertyPath: speed
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 3640324842275185482, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
       propertyPath: dashSpeed
-      value: 200
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3640324842275185482, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
       propertyPath: dashDuration
-      value: 5
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4705800206845503935, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
       propertyPath: m_Name
       value: PlrPlusCamera
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705800206845503935, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705800206845503935, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5824287467414771514, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
       propertyPath: m_LocalPosition.x
@@ -494,38 +473,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5824287467414771514, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7655531103190007733, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
-      propertyPath: m_BodyType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7655531103190007733, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 214e67249fb5b6a43a180ca70aefcdb6, type: 2}
-    - target: {fileID: 7655531103190007733, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
-      propertyPath: m_SleepingMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7655531103190007733, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
-      propertyPath: m_IncludeLayers.m_Bits
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 7655531103190007733, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
-      propertyPath: m_UseFullKinematicContacts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8047278430299201841, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8960829783942809865, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 214e67249fb5b6a43a180ca70aefcdb6, type: 2}
-    - target: {fileID: 8960829783942809865, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
-      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
