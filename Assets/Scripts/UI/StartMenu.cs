@@ -1,11 +1,15 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class StartMenu : MonoBehaviour
 {
-    // public AudioSource UISound0, UISound1, UISound2;
+    [Header("UI")]
+    public GameObject[] buttons;
+
     [Header("Audio")]
+    // public AudioSource UISound0, UISound1, UISound2;
     public Slider SoundtrackSlider;
     public Slider SFXSlider;
 
@@ -24,9 +28,19 @@ public class StartMenu : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1f;
-
         CheckVolumeLevels();
+        StartCoroutine(ButtonsStaggerAnimation());
     }
+
+    IEnumerator ButtonsStaggerAnimation()
+    {
+        for (int i = 0; i < buttons.Length; i++) 
+        {
+            yield return new WaitForSecondsRealtime(0.3);
+            buttons[i].SetActive(true);
+        }
+    }
+
 
     public void StartGame(int i)
     {
