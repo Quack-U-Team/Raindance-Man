@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: water
+  m_Name: bathtub-water
   m_Shader: {fileID: -6465566751694194690, guid: aff4ecd7890132749a6229521a998a82, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -54,17 +54,17 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Density: 24
+    - _Density: 25
     - _EnableExternalAlpha: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Speed: 2
+    - _Speed: 3
     - _ZWrite: 0
     m_Colors:
     - _BaseColor: {r: 0.12281939, g: 0.16608244, b: 0.8679245, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
-    - _RippleColor: {r: 0.35657206, g: 0.42001268, b: 0.7610062, a: 1}
+    - _RippleColor: {r: 0.5339979, g: 0.59173185, b: 0.9056604, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &3304567712223290258

@@ -36,11 +36,10 @@ public class StartMenu : MonoBehaviour
     {
         for (int i = 0; i < buttons.Length; i++) 
         {
-            yield return new WaitForSecondsRealtime(0.3);
+            yield return new WaitForSecondsRealtime(0.3f);
             buttons[i].SetActive(true);
         }
     }
-
 
     public void StartGame(int i)
     {

@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 76ba1ba502ef5a147b00e6f54df4d8a3
+guid: 3a633c254fbbd7048a130181bb5a32fb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8591533231565066105
-    second: plant_0
+      213: -1634277487082772516
+    second: bathtub 1_0
+  - first:
+      213: -8950192768322587654
+    second: bathtub 1_1
+  - first:
+      213: -5481693559111112696
+    second: bathtub 1_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +102,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: plant_0
+      name: bathtub 1_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 8
-        width: 17
-        height: 17
+        x: 9
+        y: 6
+        width: 13
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 97f466744f14b3770800000000000000
-      internalID: 8591533231565066105
+      spriteID: cd76306c841e159e0800000000000000
+      internalID: -1634277487082772516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bathtub 1_1
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 6
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af3bcdce8178ac380800000000000000
+      internalID: -8950192768322587654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bathtub 1_2
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 8
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 808a2a150cc1de3b0800000000000000
+      internalID: -5481693559111112696
       vertices: []
       indices: 
       edges: []
@@ -148,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      plant_0: 8591533231565066105
+      bathtub 1_0: -1634277487082772516
+      bathtub 1_1: -8950192768322587654
+      bathtub 1_2: -5481693559111112696
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
