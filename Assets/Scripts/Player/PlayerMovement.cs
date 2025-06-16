@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
 
     public bool canDash = true;
-  
+    public int collectiblesFound = 0;
 
 
     public Transform shootPoint; // Placeholder for shoot point, not implemented yet
