@@ -23,7 +23,7 @@ public class StairsScript : MonoBehaviour
         if (levelManager.canChangeFloor)
         {
             floor = levelManager.currentFloor + floorAddition;
-            Debug.Log("negro");
+            
             if (other.CompareTag("Player"))
             {
 
@@ -34,7 +34,11 @@ public class StairsScript : MonoBehaviour
                 }
             }
         }
-        levelManager.canChangeFloor = false;
+        if (other.CompareTag("Player"))
+        {
+            levelManager.canChangeFloor = false;
+        }
+       
     }
 
     private void OnTriggerExit2D(Collider2D collision)

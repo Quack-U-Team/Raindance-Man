@@ -31,11 +31,14 @@ public class PlayerMovement : MonoBehaviour
     public bool schizofrenia = false;
     public bool morto = false;
 
+    public int ansiaMisfireChance = 50; // Placeholder for anxiety misfire chance
+
     public Rigidbody2D rb;
 
     public bool canDash = true;
     public int collectiblesFound = 0;
-
+    public int maxSanit‡Mentale = 100;
+    public int sanit‡Mentale = 100; // Placeholder for sanity, not implemented yet
 
     public Transform shootPoint; // Placeholder for shoot point, not implemented yet
     private float depresSpeed = 1f; // Placeholder for depression speed, not implemented yet
@@ -101,13 +104,36 @@ public class PlayerMovement : MonoBehaviour
             {
                 return; // Prevent shooting while already shooting or dashing
             }
-            Shoot();
-            currentAmmo--;
-            if (currentAmmo <= 0)
+
+            if (ansia == false)
             {
-                Invoke("Reload", 0.5f); // Automatically reload if ammo is depleted
+                Shoot();
+                currentAmmo--;
+                if (currentAmmo <= 0)
+                {
+                    Invoke("Reload", 0.5f); // Automatically reload if ammo is depleted
+                }
+                playerState = PlayerState.Shooting; // Set state to Shooting when the player shoots
             }
-            playerState = PlayerState.Shooting; // Set state to Shooting when the player shoots
+            else
+            {
+                int randomInt = Random.Range(0, 100);
+                if (randomInt < ansiaMisfireChance) // 50% chance to shoot
+                {
+                    Shoot();
+                    currentAmmo--;
+                    if (currentAmmo <= 0)
+                    {
+                        Invoke("Reload", 0.5f); // Automatically reload if ammo is depleted
+                    }
+                    playerState = PlayerState.Shooting; // Set state to Shooting when the player shoots
+                }
+                else
+                {
+                    Debug.Log("Anxiety prevented shooting this time.");
+                }
+            }
+
         }
 
         if (Input.GetKeyDown(DashKey))
