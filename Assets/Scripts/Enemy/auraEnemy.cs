@@ -16,8 +16,6 @@ public class auraEnemy : MonoBehaviour
     public Transform target;
     public Vector3 targetPosition;
 
-    PlayerMovement playerScript;
-
     Vector2 movement;
     Vector2 avoidanceDirection = Vector2.zero;
 
@@ -106,22 +104,7 @@ public class auraEnemy : MonoBehaviour
             {
 
                 movement = toPlayer;
-  
-
-
-                if (distance < stopDistance)
-                {
-                    movement = Vector2.zero;
-
-                    for (int i = 0; i < coolDownAnsia; i++)
-                    {
-                        if (playerScript != null)
-                        {
-                            playerScript.ansia = true;
-                        }
-                        return;
-                    }
-                }
+ 
             }
         }
         else
@@ -133,11 +116,6 @@ public class auraEnemy : MonoBehaviour
                 avoidingObstacle = false;
                 movement = toPlayer;
 
-                if (distance < stopDistance)
-                {
-                    movement = Vector2.zero;
-                    return;
-                }
             }
             else
             {
@@ -171,5 +149,19 @@ public class auraEnemy : MonoBehaviour
                 movement = avoidanceDirection;
             }
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+
+            PlayerMovement playerScript = collision.gameObject.GetComponent<PlayerMovement>();
+            if (playerScript != null)
+            {
+                playerScript.ansia = true;
+            }
+        }
+
     }
 }

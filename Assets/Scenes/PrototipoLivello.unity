@@ -1181,6 +1181,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1389542974}
     m_Modifications:
+    - target: {fileID: 3243195437499033808, guid: f34174401d1937e48a52a5cb739889ce, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1687313130}
     - target: {fileID: 4540455889121289791, guid: f34174401d1937e48a52a5cb739889ce, type: 3}
       propertyPath: m_Name
       value: auraEnemy (7)
@@ -2685,6 +2689,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1389542974}
     m_Modifications:
+    - target: {fileID: 3243195437499033808, guid: f34174401d1937e48a52a5cb739889ce, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1687313130}
     - target: {fileID: 4540455889121289791, guid: f34174401d1937e48a52a5cb739889ce, type: 3}
       propertyPath: m_Name
       value: auraEnemy (1)
@@ -2747,6 +2755,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1389542974}
     m_Modifications:
+    - target: {fileID: 3243195437499033808, guid: f34174401d1937e48a52a5cb739889ce, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1687313130}
     - target: {fileID: 4540455889121289791, guid: f34174401d1937e48a52a5cb739889ce, type: 3}
       propertyPath: m_Name
       value: auraEnemy (4)
@@ -8608,6 +8620,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1389542974}
     m_Modifications:
+    - target: {fileID: 3243195437499033808, guid: f34174401d1937e48a52a5cb739889ce, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1687313130}
     - target: {fileID: 4540455889121289791, guid: f34174401d1937e48a52a5cb739889ce, type: 3}
       propertyPath: m_Name
       value: auraEnemy (2)
@@ -8989,6 +9005,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1389542974}
     m_Modifications:
+    - target: {fileID: 3243195437499033808, guid: f34174401d1937e48a52a5cb739889ce, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1687313130}
     - target: {fileID: 4540455889121289791, guid: f34174401d1937e48a52a5cb739889ce, type: 3}
       propertyPath: m_Name
       value: auraEnemy
@@ -9675,7 +9695,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1401449965
 Transform:
   m_ObjectHideFlags: 0
@@ -9924,6 +9944,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1389542974}
     m_Modifications:
+    - target: {fileID: 3243195437499033808, guid: f34174401d1937e48a52a5cb739889ce, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1687313130}
     - target: {fileID: 4540455889121289791, guid: f34174401d1937e48a52a5cb739889ce, type: 3}
       propertyPath: m_Name
       value: auraEnemy (5)
@@ -10286,6 +10310,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1389542974}
     m_Modifications:
+    - target: {fileID: 3243195437499033808, guid: f34174401d1937e48a52a5cb739889ce, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1687313130}
     - target: {fileID: 4540455889121289791, guid: f34174401d1937e48a52a5cb739889ce, type: 3}
       propertyPath: m_Name
       value: auraEnemy (6)
@@ -10343,6 +10371,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1389542974}
     m_Modifications:
+    - target: {fileID: 3243195437499033808, guid: f34174401d1937e48a52a5cb739889ce, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1687313130}
     - target: {fileID: 4540455889121289791, guid: f34174401d1937e48a52a5cb739889ce, type: 3}
       propertyPath: m_Name
       value: auraEnemy (3)

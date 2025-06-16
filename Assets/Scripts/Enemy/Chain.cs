@@ -30,10 +30,11 @@ public class Chain : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            IHittable hittable = collision.gameObject.GetComponent<IHittable>();
-            if (hittable != null)
+            
+            PlayerMovement plrMovement = collision.gameObject.GetComponent<PlayerMovement>();
+            if (plrMovement != null)
             {
-                hittable.OnHitSuffered();
+                plrMovement.depressione = true;
             }
 
             Destroy(gameObject);
