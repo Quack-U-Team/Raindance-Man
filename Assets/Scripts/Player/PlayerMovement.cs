@@ -31,6 +31,9 @@ public class PlayerMovement : MonoBehaviour
     public bool schizofrenia = false;
     public bool morto = false;
 
+    public float ansiaDuration = 20f; // Placeholder for anxiety duration, not implemented yet
+    public float depressioneDuration = 20f; // Placeholder for depression duration, not implemented yet
+
     public int ansiaMisfireChance = 50; // Placeholder for anxiety misfire chance
 
     public Rigidbody2D rb;
@@ -67,6 +70,16 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (ansia)
+        {
+            Invoke("removeAnsia", ansiaDuration); // Remove anxiety after 5 seconds
+        }
+        if (depressione)
+        {
+            Invoke("removeDepressione", depressioneDuration); // Remove depression after 5 seconds
+        }
+       
         if (playerState != PlayerState.Dashing )
         {
             movement.x = Input.GetAxisRaw("Horizontal"); // A e D
@@ -254,4 +267,16 @@ public class PlayerMovement : MonoBehaviour
        
      
     }
+
+    private void removeAnsia()
+    {
+        ansia = false; // Reset anxiety state
+        Debug.Log("Anxiety removed.");
+    }
+    private void removeDepressione()
+    {
+        depressione = false; // Reset anxiety state
+        Debug.Log("Depression removed.");
+    }
+   
 }
