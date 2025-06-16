@@ -61,8 +61,8 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _RippleFrequency: 2.21
-    - _RippleSpeed: 1.26
+    - _RippleFrequency: 6.53
+    - _RippleSpeed: 1.61
     - _RippleStrength: 0.298
     m_Colors:
     - _RippleCenter: {r: 0, g: 0, b: 0, a: 0}
