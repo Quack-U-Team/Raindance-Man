@@ -281,7 +281,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void death()
     {
-       Debug.Log("Player is dead.");
+        InGameUI.GameOver();
     }
 
 

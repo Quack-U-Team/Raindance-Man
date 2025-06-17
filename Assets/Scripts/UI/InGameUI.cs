@@ -16,7 +16,7 @@ public class InGameUI : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    public static void OpenVictoryScreen()
+    public static void Victory()
     {
         if (instance != null) 
         {
@@ -29,7 +29,7 @@ public class InGameUI : MonoBehaviour
         }
     }
 
-    public static void OpenDeathScreen()
+    public static void GameOver()
     {
         if (instance != null)
         {
@@ -44,10 +44,5 @@ public class InGameUI : MonoBehaviour
     public void LoadMainMenu()
     {
         SceneManager.LoadScene(0);
-    }
-
-    public static void Victory()
-    {
-        
     }
 }
