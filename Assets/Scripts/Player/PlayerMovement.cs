@@ -278,5 +278,11 @@ public class PlayerMovement : MonoBehaviour
         depressione = false; // Reset anxiety state
         Debug.Log("Depression removed.");
     }
-   
+
+    public void death()
+    {
+       Debug.Log("Player is dead.");
+    }
+
+
 }
