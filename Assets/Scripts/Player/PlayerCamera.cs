@@ -26,42 +26,45 @@ public class PlayerCamera : MonoBehaviour
 
     void LateUpdate()
     {
-        // Controlla se il playerTransform si sta muovendo
-        bool isMoving = Vector3.Distance(playerTransform.position, _lastPosition) > 0.01f;
-        _lastPosition = playerTransform.position;
-
-        // Gestisci i ritardi
-        if (isMoving && !_playerIsMoving)
+        if(playerTransform != null)
         {
-            _playerIsMoving = true;
-            _delayTimer = startDelay;
-        }
-        else if (!isMoving && _playerIsMoving)
-        {
-            _playerIsMoving = false;
-            _delayTimer = stopDelay;
-        }
+            // Controlla se il playerTransform si sta muovendo
+            bool isMoving = Vector3.Distance(playerTransform.position, _lastPosition) > 0.01f;
+            _lastPosition = playerTransform.position;
 
-        // Calcola la posizione target
-        Vector3 targetPosition = playerTransform.position + offset;
+            // Gestisci i ritardi
+            if (isMoving && !_playerIsMoving)
+            {
+                _playerIsMoving = true;
+                _delayTimer = startDelay;
+            }
+            else if (!isMoving && _playerIsMoving)
+            {
+                _playerIsMoving = false;
+                _delayTimer = stopDelay;
+            }
 
-        // Applica il movimento smooth con ritardo
-        float currentSpeed = smoothSpeed;
-        if (_delayTimer > 0)
-        {
-            currentSpeed = smoothSpeed * 0.5f;  // Rallenta durante i ritardi
-            _delayTimer -= Time.deltaTime;
-        }
+            // Calcola la posizione target
+            Vector3 targetPosition = playerTransform.position + offset;
 
-        transform.position = Vector3.SmoothDamp(
-            transform.position,
-            targetPosition,
-            ref _velocity,
-            1f / currentSpeed
-        );
+            // Applica il movimento smooth con ritardo
+            float currentSpeed = smoothSpeed;
+            if (_delayTimer > 0)
+            {
+                currentSpeed = smoothSpeed * 0.5f;  // Rallenta durante i ritardi
+                _delayTimer -= Time.deltaTime;
+            }
+
+            transform.position = Vector3.SmoothDamp(
+                transform.position,
+                targetPosition,
+                ref _velocity,
+                1f / currentSpeed
+            );
 
         // Fai guardare la camera al playerTransform
         //transform.LookAt(playerTransform);
+        }
     }
 
 

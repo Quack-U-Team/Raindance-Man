@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b10f8ed84117e0946a483843a8727e40
+guid: 3cbaef151332a584fa5b979686afd365
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8658850166083280144
-    second: flower1_0
+      213: 4124642309158583769
+    second: doodle0_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: flower1_0
+      name: doodle0_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 4
-        width: 27
-        height: 26
+        x: 1
+        y: 1
+        width: 28
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0f2264786a595d780800000000000000
-      internalID: -8658850166083280144
+      spriteID: 9ddb1fea35cad3930800000000000000
+      internalID: 4124642309158583769
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      flower1_0: -8658850166083280144
+      doodle0_0: 4124642309158583769
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
