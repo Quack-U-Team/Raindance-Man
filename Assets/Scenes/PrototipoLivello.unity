@@ -7254,22 +7254,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 862107712119822423, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.094
-      objectReference: {fileID: 0}
-    - target: {fileID: 1498502952404741310, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 0dcc161f1286e3c42b07739e1b921d4b, type: 2}
-    - target: {fileID: 3640324842275185482, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
-      propertyPath: dashSpeed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3640324842275185482, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
-      propertyPath: dashDuration
-      value: 0.3
-      objectReference: {fileID: 0}
     - target: {fileID: 4705800206845503935, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
       propertyPath: m_Name
       value: PlrPlusCamera
@@ -7314,44 +7298,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8642299531486143431, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
-      propertyPath: m_Parameters.colorGradient.ctime1
-      value: 27371
-      objectReference: {fileID: 0}
-    - target: {fileID: 8642299531486143431, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
-      propertyPath: m_Parameters.colorGradient.key0.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8642299531486143431, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
-      propertyPath: m_Parameters.colorGradient.key0.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8642299531486143431, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
-      propertyPath: m_Parameters.colorGradient.key0.r
-      value: 0.70732594
-      objectReference: {fileID: 0}
-    - target: {fileID: 8642299531486143431, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
-      propertyPath: m_Parameters.colorGradient.key1.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8642299531486143431, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
-      propertyPath: m_Parameters.colorGradient.key1.g
-      value: 0.1462264
-      objectReference: {fileID: 0}
-    - target: {fileID: 8642299531486143431, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
-      propertyPath: m_Parameters.colorGradient.key1.r
-      value: 0.23609738
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8047278430299201841, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1823517049}
-    - targetCorrespondingSourceObject: {fileID: 8774057471089301593, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1268911199}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
 --- !u!1 &1103051613
 GameObject:
@@ -9324,33 +9274,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1268911196 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8774057471089301593, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
-  m_PrefabInstance: {fileID: 1102262640}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1268911199
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1268911196}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 66c10e68ee231e94a8ab1f7936ebde40, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1279703156
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11585,7 +11508,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3640324842275185482, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
   m_PrefabInstance: {fileID: 1102262640}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1823517044}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d55afc2c72663f47a0d023eee537a6f, type: 3}
@@ -12311,23 +12234,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6005622990491704124, guid: c6b1c5927b20d8741a8845c613d4154c, type: 3}
   m_PrefabInstance: {fileID: 1797438069}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1823517044 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8047278430299201841, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
-  m_PrefabInstance: {fileID: 1102262640}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1823517049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1823517044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b840fdd32416bcc4b8f500f1aa2ad901, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1842526915
 GameObject:
   m_ObjectHideFlags: 0

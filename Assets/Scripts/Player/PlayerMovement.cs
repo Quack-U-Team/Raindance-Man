@@ -1,4 +1,6 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -40,8 +42,8 @@ public class PlayerMovement : MonoBehaviour
 
     public bool canDash = true;
     public int collectiblesFound = 0;
-    public int maxSanitàMentale = 100;
-    public int sanitàMentale = 100; // Placeholder for sanity, not implemented yet
+    public int maxSanitaMentale = 100;
+    public int sanitaMentale = 100; // Placeholder for sanity, not implemented yet
 
     public Transform shootPoint; // Placeholder for shoot point, not implemented yet
     private float depresSpeed = 1f; // Placeholder for depression speed, not implemented yet
@@ -55,21 +57,26 @@ public class PlayerMovement : MonoBehaviour
     }
     public PlayerState playerState = PlayerState.Idle;
 
+    public Scene LoseScene;
 
     private KeyCode ShootKey = KeyCode.Mouse0;
     private KeyCode DashKey = KeyCode.Space; 
     public LayerMask enemyLayer;
 
+    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Time.fixedDeltaTime = 0.016f; // ~60 FixedUpdates/sec (anziché 50)
+        Time.fixedDeltaTime = 0.016f; // ~60 FixedUpdates/sec (anzichï¿½ 50)
     
     }
 
     // Update is called once per frame
     void Update()
     {
+
+       
 
         if (ansia)
         {
@@ -193,9 +200,11 @@ public class PlayerMovement : MonoBehaviour
     private void Shoot()
     {
         RaycastHit2D hit = Physics2D.Raycast(shootPoint.position, shootPoint.up * -1, 30f, enemyLayer);
-        ShowLaser(shootPoint.position, shootPoint.position + shootPoint.up * -1 * 30f);
+
         if (hit.collider != null)
         {
+            Vector2 hitPosition = hit.point;
+            ShowLaser(shootPoint.position, hitPosition);
             Debug.Log("Hit: " + hit.collider.name);
             int hitLayer = hit.collider.gameObject.layer;
             string layerName = LayerMask.LayerToName(hitLayer);
@@ -203,12 +212,19 @@ public class PlayerMovement : MonoBehaviour
             {
 
                 Destroy(hit.collider.gameObject); // Assuming the enemy has a script that handles its destruction
+                if (!ansia || !depressione)
+                {
+                    mentalPointsRemove(-5); // Reduce mental points by 10 if not affected by anxiety, depression, or schizophrenia
+                }
+               
             }
 
 
         }
         else
         {
+            Vector2 endPosition = shootPoint.position + (-shootPoint.up * 30f);
+            ShowLaser(shootPoint.position, endPosition);
             Debug.Log("Missed!");
         }
 
@@ -281,7 +297,23 @@ public class PlayerMovement : MonoBehaviour
 
     public void death()
     {
-        InGameUI.GameOver();
+       Debug.Log("Player is dead.");
+       SceneManager.LoadScene(LoseScene.name);
+    }
+
+    public void deathAnim()
+    {
+        morto = true; // Set dead state
+        Invoke("death", 2f); // Call death after 2 seconds
+    }
+
+    public void mentalPointsRemove(int dannoMentale)
+    {
+        sanitaMentale -= dannoMentale; // Reduce mental points by damage
+        if (sanitaMentale <= 0)
+        {
+            deathAnim(); // Call death animation if mental points reach zero
+        }
     }
 
 
