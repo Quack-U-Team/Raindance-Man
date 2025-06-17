@@ -18,7 +18,6 @@ public class Enemy : MonoBehaviour
     public Transform target;
     Rigidbody2D rb;
 
-    PlayerMovement playerScript;
 
     Vector2 movement;
     Vector2 avoidanceDirection = Vector2.zero;
