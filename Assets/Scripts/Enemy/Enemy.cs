@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour
     public float rotationSpeed = 50f;
 
     public Transform target;
+    Animator anim;
     Rigidbody2D rb;
 
 
@@ -31,7 +32,7 @@ public class Enemy : MonoBehaviour
     {
 
         target = GameObject.Find("Player").transform;
-
+        anim = this.GetComponentInChildren<Animator>();
 
         rb = GetComponent<Rigidbody2D>();
 
@@ -49,19 +50,29 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-            InvokeRepeating(nameof(RefreshAI), 0, refreshAIcooldown);
+        InvokeRepeating(nameof(RefreshAI), 0, refreshAIcooldown);
     }
 
+    void SetTrigger(string s)
+    {
+        if(anim != null)
+        {
+            anim.SetTrigger(s);
+        }
+    }
 
     void Update()
     {
         RotateToPlr();
         if (!isDashing)
         {
-
             rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+            SetTrigger("walk");
         }
-
+        else
+        {
+            SetTrigger("idle");
+        }
     }
 
     void RefreshAI()
@@ -200,14 +211,16 @@ public class Enemy : MonoBehaviour
 
     IEnumerator Dash()
     {
-
+        if (anim != null)
+        {
+            SetTrigger("dash");
+        }
         isDashing = true;
 
 
         Vector2 dashDirection = (target.position - transform.position).normalized;
 
         float elapsed = 0f;
-
 
         while (elapsed < dashDuration)
         {

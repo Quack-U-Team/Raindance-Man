@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5103810353309261409}
   - component: {fileID: 489658302263149509}
+  - component: {fileID: 8203464597239655457}
   m_Layer: 7
-  m_Name: EnemyDust
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,6 +88,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &8203464597239655457
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8271470897039719350}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 79f8aae7bf9d622459d6f25af3cde695, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &9220379332642576131
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,4 +226,6 @@ MonoBehaviour:
   followRange: 5
   dashRange: 0.5
   dashDuration: 0.3
+  rotationAngle: 90
+  rotationSpeed: 50
   target: {fileID: 0}
