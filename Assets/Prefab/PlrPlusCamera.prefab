@@ -261,6 +261,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3562273811991985756, guid: 6a80614b938f014448b56b6aeb917664, type: 3}
+      propertyPath: maxAmmo
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3562273811991985756, guid: 6a80614b938f014448b56b6aeb917664, type: 3}
       propertyPath: dashSpeed
       value: 3
       objectReference: {fileID: 0}
@@ -273,12 +277,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8080700120118398010}
     - target: {fileID: 3562273811991985756, guid: 6a80614b938f014448b56b6aeb917664, type: 3}
+      propertyPath: currentAmmo
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3562273811991985756, guid: 6a80614b938f014448b56b6aeb917664, type: 3}
       propertyPath: dashDuration
       value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 3562273811991985756, guid: 6a80614b938f014448b56b6aeb917664, type: 3}
       propertyPath: rotationAngle
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3562273811991985756, guid: 6a80614b938f014448b56b6aeb917664, type: 3}
+      propertyPath: enemyLayer.m_Bits
+      value: 1408
       objectReference: {fileID: 0}
     - target: {fileID: 4207767555273917834, guid: 6a80614b938f014448b56b6aeb917664, type: 3}
       propertyPath: m_LocalPosition.x

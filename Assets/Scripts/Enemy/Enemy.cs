@@ -15,6 +15,9 @@ public class Enemy : MonoBehaviour
     bool avoidingObstacle = false;
     bool playerAlive = true;
 
+    public float rotationAngle = 90f;
+    public float rotationSpeed = 50f;
+
     public Transform target;
     Rigidbody2D rb;
 
@@ -35,7 +38,14 @@ public class Enemy : MonoBehaviour
         obstacleLayer = LayerMask.GetMask("Obstacles");
 
     }
-
+    private void RotateToPlr()
+    {
+        Vector3 plrPosition = target.position;
+        Vector2 direction = plrPosition - transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + rotationAngle;
+        Quaternion targetRotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+    }
 
     void Start()
     {
@@ -45,7 +55,7 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-
+        RotateToPlr();
         if (!isDashing)
         {
 
@@ -179,7 +189,12 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-           Destroy(collision.gameObject);
+            if (collision.gameObject.GetComponent<PlayerMovement>().morto) 
+            {
+                return;
+            }
+            collision.gameObject.GetComponent<PlayerMovement>().deathAnim();
+            
         }
     }
 

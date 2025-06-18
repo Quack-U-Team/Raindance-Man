@@ -199,7 +199,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Shoot()
     {
-        RaycastHit2D hit = Physics2D.Raycast(shootPoint.position, shootPoint.up * -1, 30f, enemyLayer);
+        RaycastHit2D hit = Physics2D.Raycast(shootPoint.position, shootPoint.up * -1, shootRange, enemyLayer);
 
         if (hit.collider != null)
         {
@@ -223,7 +223,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            Vector2 endPosition = shootPoint.position + (-shootPoint.up * 30f);
+            Vector2 endPosition = shootPoint.position + (-shootPoint.up * shootRange);
             ShowLaser(shootPoint.position, endPosition);
             Debug.Log("Missed!");
         }
