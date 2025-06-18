@@ -16,8 +16,13 @@ public class auraEnemy : MonoBehaviour
     public Transform target;
     public Vector3 targetPosition;
 
+    public float rotationAngle = 90f;
+    public float rotationSpeed = 50f;
+
     Vector2 movement;
     Vector2 avoidanceDirection = Vector2.zero;
+
+    public float dannoMentale = 1.0f;
 
     LayerMask obstacleLayer;
 
@@ -32,6 +37,15 @@ public class auraEnemy : MonoBehaviour
         obstacleLayer = LayerMask.GetMask("Obstacles");
     }
 
+    private void RotateToPlr()
+    {
+        Vector3 plrPosition = target.position;
+        Vector2 direction = plrPosition - transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + rotationAngle;
+        Quaternion targetRotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -41,6 +55,7 @@ public class auraEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        RotateToPlr();
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
     }
 
@@ -151,17 +166,5 @@ public class auraEnemy : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-
-            PlayerMovement playerScript = collision.gameObject.GetComponent<PlayerMovement>();
-            if (playerScript != null)
-            {
-                playerScript.ansia = true;
-            }
-        }
-
-    }
+   
 }

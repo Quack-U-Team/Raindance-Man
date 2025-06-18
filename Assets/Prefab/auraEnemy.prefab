@@ -54,6 +54,9 @@ MonoBehaviour:
   coolDownAnsia: 5
   target: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
+  rotationAngle: 90
+  rotationSpeed: 50
+  dannoMentale: 1
 --- !u!50 &733019823905796364
 Rigidbody2D:
   serializedVersion: 5
@@ -137,7 +140,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7120696064292761412}
   - component: {fileID: 6764539139354762717}
-  m_Layer: 7
+  - component: {fileID: 6156493677183916492}
+  - component: {fileID: 1873502631267585415}
+  m_Layer: 13
   m_Name: auraEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,3 +219,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &6156493677183916492
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7645933337399816834}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.007965714, y: -0.019250914}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.26, y: 0.13}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.6343991, y: 0.5216589}
+  m_EdgeRadius: 0
+--- !u!114 &1873502631267585415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7645933337399816834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd83baca1be29ee4fbe858f69830b886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  auraDamage: 1
+  playerScript: {fileID: 0}

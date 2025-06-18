@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
@@ -42,8 +43,8 @@ public class PlayerMovement : MonoBehaviour
 
     public bool canDash = true;
     public int collectiblesFound = 0;
-    public int maxSanitaMentale = 100;
-    public int sanitaMentale = 100; // Placeholder for sanity, not implemented yet
+    public float maxSanitaMentale = 100;
+    public float sanitaMentale = 100; // Placeholder for sanity, not implemented yet
 
     public Transform shootPoint; // Placeholder for shoot point, not implemented yet
     private float depresSpeed = 1f; // Placeholder for depression speed, not implemented yet
@@ -212,7 +213,7 @@ public class PlayerMovement : MonoBehaviour
             {
 
                 Destroy(hit.collider.gameObject); // Assuming the enemy has a script that handles its destruction
-                if (!ansia || !depressione)
+                if (!ansia && !depressione)
                 {
                     mentalPointsRemove(-5); // Reduce mental points by 10 if not affected by anxiety, depression, or schizophrenia
                 }
@@ -287,12 +288,12 @@ public class PlayerMovement : MonoBehaviour
     private void removeAnsia()
     {
         ansia = false; // Reset anxiety state
-        Debug.Log("Anxiety removed.");
+        //Debug.Log("Anxiety removed.");
     }
     private void removeDepressione()
     {
         depressione = false; // Reset anxiety state
-        Debug.Log("Depression removed.");
+        //Debug.Log("Depression removed.");
     }
 
     public void death()
@@ -307,9 +308,10 @@ public class PlayerMovement : MonoBehaviour
         Invoke("death", 2f); // Call death after 2 seconds
     }
 
-    public void mentalPointsRemove(int dannoMentale)
+    public void mentalPointsRemove(float dannoMentale)
     {
         sanitaMentale -= dannoMentale; // Reduce mental points by damage
+        sanitaMentale = Mathf.Clamp(sanitaMentale, 0, maxSanitaMentale);
         if (sanitaMentale <= 0)
         {
             deathAnim(); // Call death animation if mental points reach zero

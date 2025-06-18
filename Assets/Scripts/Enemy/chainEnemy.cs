@@ -18,6 +18,9 @@ public class chainEnemy : MonoBehaviour
     bool avoidingObstacle = false;
     bool playerAlive = true;
 
+    public float rotationAngle = 90f;
+    public float rotationSpeed = 50f;
+
     Rigidbody2D rb;
 
     public Transform target;
@@ -38,6 +41,15 @@ public class chainEnemy : MonoBehaviour
         obstacleLayer = LayerMask.GetMask("Obstacles");
     }
 
+    private void RotateToPlr()
+    {
+        Vector3 plrPosition = target.position;
+        Vector2 direction = plrPosition - transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + rotationAngle;
+        Quaternion targetRotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+    }
+
     void Start()
     {
         StartCoroutine(BrainCoroutine());
@@ -47,6 +59,7 @@ public class chainEnemy : MonoBehaviour
 
     void Update()
     {
+        RotateToPlr();
 
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
 
