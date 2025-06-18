@@ -9,7 +9,7 @@ public class SetSFXVolume : MonoBehaviour
         soundEffects = GetComponents<AudioSource>();
     }
 
-    private void Start()
+    private void Update()
     {
         for (int i = 0; i < soundEffects.Length; i++) 
         {

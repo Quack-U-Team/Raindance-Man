@@ -1,5 +1,7 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class InGameUI : MonoBehaviour
 {
@@ -8,6 +10,7 @@ public class InGameUI : MonoBehaviour
     public PlayerMovement playerMovement;
     public GameObject[] uiCanes;
     public Animator bulletCounterAnimator;
+    public Slider mentalHealthBar;
 
     private void Awake()
     {
@@ -19,31 +22,40 @@ public class InGameUI : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    private void Update()
+    void UpdateAmmoUI()
     {
-        
         if (playerMovement.currentAmmo <= 0)
         {
             bulletCounterAnimator.SetTrigger("reload");
         }
-        else if(playerMovement.currentAmmo > 0)
+        else if (playerMovement.currentAmmo > 0)
         {
             bulletCounterAnimator.SetTrigger("idle");
         }
 
         for (int i = 0; i < uiCanes.Length; i++)
         {
-
-                if (i < playerMovement.currentAmmo)
-                {
-                    uiCanes[i].SetActive(true);
-                }
-                else
-                {
-                    uiCanes[i].SetActive(false);
-                }
+            if (i < playerMovement.currentAmmo)
+            {
+                uiCanes[i].SetActive(true);
+            }
+            else
+            {
+                uiCanes[i].SetActive(false);
+            }
         }
-        
+    }
+
+    void UpdateMentalHealthUI()
+    {
+        mentalHealthBar.value = playerMovement.sanitaMentale;
+    }
+
+    private void Update()
+    {
+        UpdateAmmoUI();
+        UpdateMentalHealthUI();
+            
     }
 
     public static void Victory()

@@ -181,7 +181,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -277,6 +277,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8080700120118398010}
     - target: {fileID: 3562273811991985756, guid: 6a80614b938f014448b56b6aeb917664, type: 3}
+      propertyPath: shootRange
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3562273811991985756, guid: 6a80614b938f014448b56b6aeb917664, type: 3}
       propertyPath: currentAmmo
       value: 6
       objectReference: {fileID: 0}
@@ -348,6 +352,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8360132960445497041, guid: 6a80614b938f014448b56b6aeb917664, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 88f7f44839d97864e8ca97e450d721b4, type: 2}
     - target: {fileID: 8360132960445497041, guid: 6a80614b938f014448b56b6aeb917664, type: 3}
       propertyPath: m_Parameters.colorGradient.ctime1
       value: 27371
