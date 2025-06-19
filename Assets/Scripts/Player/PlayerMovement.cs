@@ -5,6 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Audio")]
+    public AudioSource shootSound;
+    public AudioSource reloadSound;
+    public AudioSource deathSound;
+
+    [Header("Animation")]
+    private Animator anim;
+
+    [Header("Physics and balance")]
     public Transform plrTransform;
     public float speed = 5f;
     private Vector2 movement;
@@ -29,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
     public int maxAmmo = 10; // Placeholder for maximum ammo, not implemented yet
     public int currentAmmo = 10; // Placeholder for current ammo, not implemented yet
 
+    [Header("Status effects")]
     public bool ansia = false;
     public bool depressione = false;
     public bool schizofrenia = false;
@@ -58,7 +68,6 @@ public class PlayerMovement : MonoBehaviour
     }
     public PlayerState playerState = PlayerState.Idle;
 
-    public Scene LoseScene;
 
     private KeyCode ShootKey = KeyCode.Mouse0;
     private KeyCode DashKey = KeyCode.Space; 
@@ -70,14 +79,32 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         Time.fixedDeltaTime = 0.016f; // ~60 FixedUpdates/sec (anzich� 50)
-    
+        anim = this.GetComponentInChildren<Animator>();
+        anim.SetTrigger("spawn");
+    }
+
+    void BaseAnimations()
+    {
+        if (playerState == PlayerState.Idle)
+        {
+            anim.SetTrigger("idle");
+        }
+
+        if (playerState == PlayerState.Dashing)
+        {
+            anim.SetTrigger("roll");
+        }
+
+        if (playerState == PlayerState.Shooting)
+        {
+            anim.SetTrigger("shoot");
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-
-       
+        BaseAnimations();
 
         if (ansia)
         {
@@ -200,6 +227,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Shoot()
     {
+        shootSound.Play();
         RaycastHit2D hit = Physics2D.Raycast(shootPoint.position, shootPoint.up * -1, shootRange, enemyLayer);
 
         if (hit.collider != null)
@@ -219,7 +247,7 @@ public class PlayerMovement : MonoBehaviour
                 }
                
             }
-
+            
 
         }
         else
@@ -245,8 +273,6 @@ public class PlayerMovement : MonoBehaviour
         playerState = PlayerState.Idle; // Reset state to Idle after shooting
     }
 
-    
-
     private void Reload()
     {
         if (isReloading || currentAmmo >= maxAmmo)
@@ -259,6 +285,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FinishReload()
     {
+        reloadSound.Play();
         currentAmmo = maxAmmo; // Reset current ammo to max ammo
         isReloading = false; // Reset reloading state
     }
@@ -299,12 +326,15 @@ public class PlayerMovement : MonoBehaviour
     public void death()
     {
        Debug.Log("Player is dead.");
-       SceneManager.LoadScene(LoseScene.name);
+        // aprire game over ui qui
     }
 
     public void deathAnim()
     {
         morto = true; // Set dead state
+        deathSound.Play();
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        anim.SetTrigger("death");
         Invoke("death", 2f); // Call death after 2 seconds
     }
 

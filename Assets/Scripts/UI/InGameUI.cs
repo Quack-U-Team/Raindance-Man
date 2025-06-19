@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class InGameUI : MonoBehaviour
 {
+    [Header("Audio")]
+    public GameObject inGameOst;
+
+    [Header("Other")]
     private static InGameUI instance;
     public GameObject victoryScreen, gameOverScreen;
     public PlayerMovement playerMovement;
@@ -63,6 +67,7 @@ public class InGameUI : MonoBehaviour
         if (instance != null) 
         {
             Time.timeScale = 0f;
+            instance.inGameOst.SetActive(false);
             instance.victoryScreen.SetActive(true);
         }
         else
@@ -76,6 +81,7 @@ public class InGameUI : MonoBehaviour
         if (instance != null)
         {
             Time.timeScale = 0f;
+            instance.inGameOst.SetActive(false);
             instance.gameOverScreen.SetActive(true);
         }
         else

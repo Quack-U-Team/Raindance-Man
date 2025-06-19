@@ -12,11 +12,6 @@ public class PlayerAnimations : MonoBehaviour
         playerAnimator = this.GetComponentInChildren<Animator>();
     }
 
-    private void Start()
-    {
-        playerAnimator.SetTrigger("spawn");
-    }
-
     private void Update()
     {
         CheckPlayerState();
@@ -26,20 +21,7 @@ public class PlayerAnimations : MonoBehaviour
     {
         curState = playerMovement.playerState;
 
-        if(curState == PlayerMovement.PlayerState.Idle)
-        {
-            playerAnimator.SetTrigger("idle");
-        }
-
-        if (curState == PlayerMovement.PlayerState.Dashing)
-        {
-            playerAnimator.SetTrigger("roll");
-        }
-
-        if (curState == PlayerMovement.PlayerState.Shooting)
-        {
-            playerAnimator.SetTrigger("shoot");
-        }
+       
 
     }
 }
