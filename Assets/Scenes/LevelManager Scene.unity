@@ -175,6 +175,7 @@ MonoBehaviour:
   levelManager: {fileID: 1466526007}
   thisFloor: 0
   floor: 0
+  tpTransform: {fileID: 0}
 --- !u!61 &282926639
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -505,6 +506,7 @@ MonoBehaviour:
   levelManager: {fileID: 1466526007}
   thisFloor: 1
   floor: 0
+  tpTransform: {fileID: 0}
 --- !u!61 &946305445
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -897,9 +899,10 @@ MonoBehaviour:
   Layers:
   - {fileID: 1401449964}
   - {fileID: 1389542973}
-  Player: {fileID: 1687313127}
+  Player: {fileID: 1687313131}
   currentFloor: 0
   canChangeFloor: 1
+  miasmaBlocks: []
 --- !u!4 &1466526008
 Transform:
   m_ObjectHideFlags: 0
@@ -1077,11 +1080,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &1687313127 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8047278430299201841, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
+--- !u!114 &1687313131 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3640324842275185482, guid: 6e47f3d77a8369e429cc62886fcf5841, type: 3}
   m_PrefabInstance: {fileID: 1102262640}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d55afc2c72663f47a0d023eee537a6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2078052775
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: fbe7d683c9a62654083a35a1368dde8a
+guid: 293cf6e58c065794583ae7e63112481d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5699104055798326421
-    second: Garden_0
+      213: -3296362929794034626
+    second: shoot_0
+  - first:
+      213: 7554319563551622173
+    second: shoot_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Garden_0
+      name: shoot_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 3800
-        height: 3000
+        x: 24
+        y: 32
+        width: 14
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b6b17207e07b8e0b0800000000000000
-      internalID: -5699104055798326421
+      spriteID: e345cd65167f042d0800000000000000
+      internalID: -3296362929794034626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot_1
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 15
+        width: 35
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1447495e9556d860800000000000000
+      internalID: 7554319563551622173
       vertices: []
       indices: 
       edges: []
@@ -125,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Garden_0: -5699104055798326421
+      shoot_0: -3296362929794034626
+      shoot_1: 7554319563551622173
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

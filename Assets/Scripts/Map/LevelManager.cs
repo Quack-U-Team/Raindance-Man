@@ -30,7 +30,10 @@ public class LevelManager : MonoBehaviour
         }
         if (Player.collectiblesFound == 2)
         {
-            miasmaBlocks[1].SetActive(false);
+            for (int i = 0; i <= Layers.Length; i++)
+            {
+                miasmaBlocks[i].SetActive(false);
+            }
         }
         if (Player.collectiblesFound == 3)
         {
