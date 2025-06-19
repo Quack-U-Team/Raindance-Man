@@ -174,9 +174,9 @@ public class auraEnemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
 
-
-
             playerScript.ansia = true;
+            playerScript.mentalPointsRemove(10);
+            playerScript.deathAnim();
 
         }
     }

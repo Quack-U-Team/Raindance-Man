@@ -35,6 +35,8 @@ public class Chain : MonoBehaviour
             if (plrMovement != null)
             {
                 plrMovement.depressione = true;
+                plrMovement.mentalPointsRemove(10);
+                plrMovement.deathAnim();
             }
 
             Destroy(gameObject);
