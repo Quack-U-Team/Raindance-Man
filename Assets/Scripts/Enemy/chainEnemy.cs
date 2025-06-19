@@ -206,8 +206,9 @@ public class chainEnemy : MonoBehaviour
         newBullet.SetActive(true);
 
         Chain chainScript = newBullet.GetComponent<Chain>();
-        chainScript.direction = (targetPosition - transform.position).normalized;
 
+        Vector3 currentPlayerPosition = target.position;
+        chainScript.direction = (currentPlayerPosition - transform.position).normalized;
 
         isInCoolDown = true;
         Invoke("ResetCoolDown", shootCoolDown);
