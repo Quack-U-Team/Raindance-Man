@@ -7,6 +7,7 @@ public class StairsScript : MonoBehaviour
     public LevelManager levelManager;
     public int thisFloor = 0;
     public int floor;
+    public Transform tpTransform;
     void Start()
     {
         
@@ -29,24 +30,14 @@ public class StairsScript : MonoBehaviour
 
                 if (levelManager != null)
                 {
-
+                    other.transform.position = tpTransform.position;
                     levelManager.ChangeFloor(floor);
                 }
             }
         }
-        if (other.CompareTag("Player"))
-        {
-            levelManager.canChangeFloor = false;
-        }
+        
        
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player") && levelManager.currentFloor == thisFloor)
-        {
-            levelManager.canChangeFloor = true;
-            Debug.Log("Player exited stairs trigger, can change floor now.");
-        }
-    }
+  
 }
