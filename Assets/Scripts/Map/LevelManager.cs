@@ -8,7 +8,7 @@ public class LevelManager : MonoBehaviour
     public int currentFloor = 0;
     public bool canChangeFloor = true;
     [SerializeField] private GameObject[] miasmaBlocks;
-
+    
 
     private void Awake()
     {
@@ -37,7 +37,7 @@ public class LevelManager : MonoBehaviour
         }
         if (Player.collectiblesFound == 3)
         {
-            //funzionevittoria da aggiungere
+            InGameUI.Victory();   
         }
     }
 

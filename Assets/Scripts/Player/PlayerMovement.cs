@@ -205,11 +205,17 @@ public class PlayerMovement : MonoBehaviour
         {
             RotateToMouse();
         }
-      
 
 
 
+        movement.x *= speed; // Scale movement by speed and fixed delta time
+        movement.y *= speed; // Scale movement by speed and fixed delta time
+        if (playerState == PlayerState.Dashing)
+        {
+            movement.x *= dashSpeed;
+            movement.y *= dashSpeed; // Apply dash speed to movement
         }
+    }
 
     private void RotateToMouse()
     {
@@ -297,13 +303,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        movement.x *= speed; // Scale movement by speed and fixed delta time
-        movement.y *= speed; // Scale movement by speed and fixed delta time
-        if (playerState == PlayerState.Dashing)
-        {
-            movement.x *= dashSpeed;
-            movement.y *= dashSpeed; // Apply dash speed to movement
-        }
+        
         
 
 
@@ -326,7 +326,7 @@ public class PlayerMovement : MonoBehaviour
     public void death()
     {
        Debug.Log("Player is dead.");
-        // aprire game over ui qui
+       InGameUI.GameOver(); // Call GameOver method from InGameUI
     }
 
     public void deathAnim()

@@ -4,6 +4,7 @@ public class AuraDamage : MonoBehaviour
 {
     public float auraDamage = 1.0f;
     public PlayerMovement playerScript;
+    public auraEnemy auraEnemyScript;
     void Start()
     {
         
@@ -15,29 +16,37 @@ public class AuraDamage : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
 
         if (collision.gameObject.CompareTag("Player"))
         {
-           
-            
-            
-                playerScript.ansia = true;
+            auraEnemyScript.target = collision.transform;
+            playerScript.ansia = true;
             
         }
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {   
         
         if (collision.gameObject.CompareTag("Player"))
         {
             
             Debug.Log("AuraDamage Stay");
-           
-                playerScript.mentalPointsRemove(auraDamage );
+            auraEnemyScript.gotPlrTransform();
+            playerScript.mentalPointsRemove(auraDamage );
             
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("AuraDamage Exit");
+            auraEnemyScript.gotPlrTransform();
+            auraEnemyScript.target = null;
         }
     }
 }

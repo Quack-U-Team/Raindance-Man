@@ -281,6 +281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   auraDamage: 1
   playerScript: {fileID: 0}
+  auraEnemyScript: {fileID: 3243195437499033808}
 --- !u!95 &180185714008622131
 Animator:
   serializedVersion: 7

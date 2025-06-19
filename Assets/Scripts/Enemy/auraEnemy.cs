@@ -31,12 +31,10 @@ public class auraEnemy : MonoBehaviour
     private void Awake()
     {
 
-        target = GameObject.Find("Player").transform;
-
-
+        //target = GameObject.Find("Player").transform;
         rb = GetComponent<Rigidbody2D>();
 
-        obstacleLayer = LayerMask.GetMask("Obstacles");
+        obstacleLayer = LayerMask.GetMask("Ground");
     }
 
     private void RotateToPlr()
@@ -66,21 +64,16 @@ public class auraEnemy : MonoBehaviour
 
 
         if (target == null)
-        {
-            playerAlive = false;
+        { 
             movement = Vector2.zero;
             return;
         }
 
-        if (!playerAlive)
-        {
-            movement = Vector2.zero;
-            return;
-        }
+       
 
         float distance = Vector2.Distance(transform.position, target.position);
         Vector2 toPlayer = ((Vector2)(target.position) - (Vector2)transform.position).normalized;
-        LayerMask obstacleLayer = LayerMask.GetMask("Obstacles");
+        LayerMask obstacleLayer = LayerMask.GetMask("Ground");
         float rayDistance = 0.8f;
 
 
@@ -176,9 +169,13 @@ public class auraEnemy : MonoBehaviour
 
             playerScript.ansia = true;
             playerScript.mentalPointsRemove(10);
-            playerScript.deathAnim();
+            
 
         }
     }
 
+    public void gotPlrTransform()
+    {
+       RefreshAI();
+    }
 }

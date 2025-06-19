@@ -36,7 +36,7 @@ public class Chain : MonoBehaviour
             {
                 plrMovement.depressione = true;
                 plrMovement.mentalPointsRemove(10);
-                plrMovement.deathAnim();
+                
             }
 
             Destroy(gameObject);

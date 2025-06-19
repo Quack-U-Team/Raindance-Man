@@ -31,16 +31,21 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
 
-        target = GameObject.Find("Player").transform;
-        anim = this.GetComponentInChildren<Animator>();
-
+        //target = GameObject.Find("Player").transform;
+        
         rb = GetComponent<Rigidbody2D>();
 
-        obstacleLayer = LayerMask.GetMask("Obstacles");
+
+        anim = this.GetComponentInChildren<Animator>();
+
+        
+
+        obstacleLayer = LayerMask.GetMask("Ground");
 
     }
     private void RotateToPlr()
     {
+        if (target == null) return; // Ensure target is not null to avoid errors
         Vector3 plrPosition = target.position;
         Vector2 direction = plrPosition - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + rotationAngle;
