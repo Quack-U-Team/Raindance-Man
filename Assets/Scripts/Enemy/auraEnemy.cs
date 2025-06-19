@@ -13,6 +13,8 @@ public class auraEnemy : MonoBehaviour
 
     Rigidbody2D rb;
 
+    public PlayerMovement playerScript;
+
     public Transform target;
     public Vector3 targetPosition;
 
@@ -166,5 +168,17 @@ public class auraEnemy : MonoBehaviour
         }
     }
 
-   
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+
+
+
+            playerScript.ansia = true;
+
+        }
+    }
+
 }
