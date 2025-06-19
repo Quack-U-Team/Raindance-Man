@@ -7,6 +7,7 @@ public class LevelManager : MonoBehaviour
     public PlayerMovement Player;
     public int currentFloor = 0;
     public bool canChangeFloor = true;
+    [SerializeField] private GameObject[] miasmaBlocks;
 
 
     private void Awake()
@@ -23,7 +24,18 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Player.collectiblesFound == 1)
+        {
+            miasmaBlocks[0].SetActive(false);
+        }
+        if (Player.collectiblesFound == 2)
+        {
+            miasmaBlocks[1].SetActive(false);
+        }
+        if (Player.collectiblesFound == 3)
+        {
+            //funzionevittoria da aggiungere
+        }
     }
 
     public void ChangeFloor(int floor)
