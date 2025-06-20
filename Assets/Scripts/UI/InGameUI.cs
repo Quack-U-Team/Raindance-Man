@@ -12,9 +12,14 @@ public class InGameUI : MonoBehaviour
     private static InGameUI instance;
     public GameObject victoryScreen, gameOverScreen;
     public PlayerMovement playerMovement;
+
+    [Header("Player info")]
+    public GameObject ansiaUI;
+    public GameObject depressioneUI;
     public GameObject[] uiCanes;
     public Animator bulletCounterAnimator;
     public Slider mentalHealthBar;
+    
 
     private void Awake()
     {
@@ -55,11 +60,32 @@ public class InGameUI : MonoBehaviour
         mentalHealthBar.value = playerMovement.sanitaMentale;
     }
 
+    void UpdateDebuffUI()
+    {
+        if (playerMovement.ansia)
+        {
+            ansiaUI.SetActive(true);
+        }
+        else
+        {
+            ansiaUI.SetActive(false);
+        }
+        
+        if (playerMovement.depressione)
+        {
+            depressioneUI.SetActive(true);
+        }
+        else
+        {
+            depressioneUI.SetActive(false);
+        }
+    }
+
     private void Update()
     {
         UpdateAmmoUI();
         UpdateMentalHealthUI();
-            
+        UpdateDebuffUI();
     }
 
     public static void Victory()

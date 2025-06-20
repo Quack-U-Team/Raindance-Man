@@ -39,7 +39,7 @@ public class AuraDamage : MonoBehaviour
             {
                 Debug.Log("AuraDamage Exit");
                 auraEnemyScript.RefreshAI();
-                auraEnemyScript.target = null;
+                
             }
         } 
     }

@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class Collectibles : MonoBehaviour
 {
+    public GameObject collectibleSoundPrefab;
+    public float soundDuration;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -12,8 +15,9 @@ public class Collectibles : MonoBehaviour
             {
                 player.collectiblesFound += 1;
             }
-
+            Instantiate(collectibleSoundPrefab);
             Destroy(gameObject);
         }
     }
+
 }

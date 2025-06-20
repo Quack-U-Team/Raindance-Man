@@ -1,7 +1,4 @@
-using TMPro;
 using UnityEngine;
-using UnityEngine.Rendering;
-using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -73,11 +70,13 @@ public class PlayerMovement : MonoBehaviour
     private KeyCode DashKey = KeyCode.Space; 
     public LayerMask enemyLayer;
 
+    private AudioSource enemyDeathSound;
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        enemyDeathSound = this.GetComponent<AudioSource>();
         Time.fixedDeltaTime = 0.016f; // ~60 FixedUpdates/sec (anzich� 50)
         anim = this.GetComponentInChildren<Animator>();
         anim.SetTrigger("spawn");
@@ -253,6 +252,7 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Hit: " + hit.collider.name);
             int hitLayer = hit.collider.gameObject.layer;
             string layerName = LayerMask.LayerToName(hitLayer);
+
             if (layerName == "Enemy")
             {
                 hitEnemy = hit.collider.gameObject;
@@ -262,7 +262,9 @@ public class PlayerMovement : MonoBehaviour
                     Animator hitEnemyAnim = hitEnemy.GetComponentInChildren<Animator>();
                     hitEnemyAnim.SetTrigger("hurt");
                 }
-                Invoke("DelayedEnemyDeath", 0.15f);
+
+                enemyDeathSound.Play();
+                Invoke("DelayedEnemyDeath", 0.2f);
 
                 if (!ansia && !depressione)
                 {

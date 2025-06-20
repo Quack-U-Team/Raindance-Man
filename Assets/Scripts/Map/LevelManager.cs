@@ -8,16 +8,13 @@ public class LevelManager : MonoBehaviour
     public int currentFloor = 0;
     public bool canChangeFloor = true;
     [SerializeField] private GameObject[] miasmaBlocks;
-    
+    AudioSource doorSlam;
 
-    private void Awake()
-    {
-        
-    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        doorSlam = this.GetComponent<AudioSource>();
         Layers[currentFloor].SetActive(true);
     }
 
@@ -43,7 +40,7 @@ public class LevelManager : MonoBehaviour
 
     public void ChangeFloor(int floor)
     {
-       
+        doorSlam.Play();
         if (currentFloor >= 0 && currentFloor < NumeroLivelli)
         {
             Debug.Log("Changing floor from: " + currentFloor + " to: " + floor);

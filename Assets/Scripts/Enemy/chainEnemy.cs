@@ -22,6 +22,7 @@ public class chainEnemy : MonoBehaviour
     public float rotationSpeed = 50f;
 
     Rigidbody2D rb;
+    AudioSource shootSound;
 
     public Transform target;
     public Vector3 targetPosition;
@@ -36,6 +37,7 @@ public class chainEnemy : MonoBehaviour
         //target = GameObject.Find("Player").transform;
         
         rb = GetComponent<Rigidbody2D>();
+        shootSound = this.GetComponent<AudioSource>();
 
         obstacleLayer = LayerMask.GetMask("Ground");
     }
@@ -210,6 +212,7 @@ public class chainEnemy : MonoBehaviour
         GameObject newBullet = Instantiate(chainTemplate);
         newBullet.transform.position = transform.position;
         newBullet.SetActive(true);
+        shootSound.Play();
 
         Chain chainScript = newBullet.GetComponent<Chain>();
 
