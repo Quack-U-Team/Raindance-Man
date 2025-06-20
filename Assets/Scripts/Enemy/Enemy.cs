@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
 
     bool isDashing = false;
     bool avoidingObstacle = false;
-    bool playerAlive = true;
+    
 
     public float rotationAngle = 90f;
     public float rotationSpeed = 50f;
@@ -80,21 +80,17 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void RefreshAI()
+    public void RefreshAI()
     {
 
         if (target == null)
         {
-            playerAlive = false;
+            
             movement = Vector2.zero;
             return;
         }
 
-        if (!playerAlive)
-        {
-            movement = Vector2.zero;
-            return;
-        }
+        
 
 
         float distance = Vector2.Distance(transform.position, target.position);
@@ -214,6 +210,10 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    public void gotPlrTransform()
+    {
+        RefreshAI();
+    }
     IEnumerator Dash()
     {
         if (anim != null)

@@ -9,7 +9,7 @@ public class auraEnemy : MonoBehaviour
     public float coolDownAnsia = 5;
 
     bool avoidingObstacle = false;
-    bool playerAlive = true;
+    
 
     Rigidbody2D rb;
 
@@ -39,6 +39,7 @@ public class auraEnemy : MonoBehaviour
 
     private void RotateToPlr()
     {
+        if (target == null) return; // Ensure target is not null to avoid errors
         Vector3 plrPosition = target.position;
         Vector2 direction = plrPosition - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + rotationAngle;
@@ -59,7 +60,7 @@ public class auraEnemy : MonoBehaviour
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
     }
 
-    void RefreshAI()
+    public void RefreshAI()
     {
 
 

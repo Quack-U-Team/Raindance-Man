@@ -16,7 +16,7 @@ public class chainEnemy : MonoBehaviour
 
     bool isInCoolDown = false;
     bool avoidingObstacle = false;
-    bool playerAlive = true;
+    
 
     public float rotationAngle = 90f;
     public float rotationSpeed = 50f;
@@ -42,6 +42,7 @@ public class chainEnemy : MonoBehaviour
 
     private void RotateToPlr()
     {
+        if (target == null) return; // Ensure target is not null to avoid errors
         Vector3 plrPosition = target.position;
         Vector2 direction = plrPosition - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + rotationAngle;
@@ -69,21 +70,17 @@ public class chainEnemy : MonoBehaviour
 
     }
 
-    void RefreshAI()
+    public void RefreshAI()
     {
 
-        if (target == null)
-        {
-            playerAlive = false;
+        if (target == null) { 
+        
             movement = Vector2.zero;
             return;
         }
 
-        if (!playerAlive)
-        {
-            movement = Vector2.zero;
-            return;
-        }
+
+        
 
         float distance = Vector2.Distance(transform.position, target.position);
         Vector2 toPlayer = ((Vector2)(target.position) - (Vector2)transform.position).normalized;
@@ -184,7 +181,10 @@ public class chainEnemy : MonoBehaviour
             }
         }
     }
-
+    public void gotPlrTransform()
+    {
+        RefreshAI();
+    }
     IEnumerator BrainCoroutine()
     {
         while (true)
