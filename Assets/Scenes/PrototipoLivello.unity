@@ -4667,6 +4667,10 @@ PrefabInstance:
       propertyPath: 'uiCanes.Array.data[5]'
       value: 
       objectReference: {fileID: 314532816}
+    - target: {fileID: 3177472474663649683, guid: 67a38674034762d41b699eb523f0ceb3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3221173800887835541, guid: 67a38674034762d41b699eb523f0ceb3, type: 3}
       propertyPath: m_Value
       value: 100
@@ -18316,7 +18320,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1389542974
 Transform:
   m_ObjectHideFlags: 0
@@ -18523,7 +18527,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1401449965
 Transform:
   m_ObjectHideFlags: 0
@@ -19202,7 +19206,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1461522521}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 732592558573a864d93498d24487fd24, type: 3}

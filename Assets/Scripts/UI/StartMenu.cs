@@ -20,9 +20,21 @@ public class StartMenu : MonoBehaviour
         {
             SoundtrackSlider.value = PlayerPrefs.GetFloat("soundtrack_volume");
         }
+        else
+        {
+            SoundtrackSlider.value = 1;
+            PlayerPrefs.SetInt("soundtrack_volume", 1);
+            PlayerPrefs.Save();
+        }
         if (PlayerPrefs.GetInt("sfx_volume_set") == 1)
         {
             SFXSlider.value = PlayerPrefs.GetFloat("sfx_volume");
+        }
+        else
+        {
+            SFXSlider.value = 1;
+            PlayerPrefs.SetInt("sfx_volume", 1);
+            PlayerPrefs.Save();
         }
     }
 
@@ -30,7 +42,7 @@ public class StartMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         CheckVolumeLevels();
-        StartCoroutine(ButtonsStaggerAnimation());
+        //StartCoroutine(ButtonsStaggerAnimation());
     }
 
     IEnumerator ButtonsStaggerAnimation()
