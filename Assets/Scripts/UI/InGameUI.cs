@@ -93,4 +93,9 @@ public class InGameUI : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    public void LoadScene(int i)
+    {
+        SceneManager.LoadScene(i);
+    }
 }

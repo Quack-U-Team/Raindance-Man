@@ -85,19 +85,22 @@ public class PlayerMovement : MonoBehaviour
 
     void BaseAnimations()
     {
-        if (playerState == PlayerState.Idle)
-        {
-            anim.SetTrigger("idle");
-        }
+        if (!morto)
+        { 
+            if (playerState == PlayerState.Idle)
+            {
+                anim.SetTrigger("idle");
+            }
 
-        if (playerState == PlayerState.Dashing)
-        {
-            anim.SetTrigger("roll");
-        }
+            if (playerState == PlayerState.Dashing)
+            {
+                anim.SetTrigger("roll");
+            }
 
-        if (playerState == PlayerState.Shooting)
-        {
-            anim.SetTrigger("shoot");
+            if (playerState == PlayerState.Shooting)
+            {
+                anim.SetTrigger("shoot");
+            }
         }
     }
 
@@ -231,6 +234,13 @@ public class PlayerMovement : MonoBehaviour
         canDash = true; // Reset dash cooldown
     }
 
+    GameObject hitEnemy;
+
+    void DelayedEnemyDeath()
+    {
+        Destroy(hitEnemy); // Assuming the enemy has a script that handles its destruction
+    }
+
     private void Shoot()
     {
         shootSound.Play();
@@ -245,8 +255,15 @@ public class PlayerMovement : MonoBehaviour
             string layerName = LayerMask.LayerToName(hitLayer);
             if (layerName == "Enemy")
             {
+                hitEnemy = hit.collider.gameObject;
+                if (hitEnemy.GetComponentInChildren<Animator>() != null)
+                {
+                    Debug.LogWarning("setTrigger hurt");
+                    Animator hitEnemyAnim = hitEnemy.GetComponentInChildren<Animator>();
+                    hitEnemyAnim.SetTrigger("hurt");
+                }
+                Invoke("DelayedEnemyDeath", 0.15f);
 
-                Destroy(hit.collider.gameObject); // Assuming the enemy has a script that handles its destruction
                 if (!ansia && !depressione)
                 {
                     mentalPointsRemove(-5); // Reduce mental points by 10 if not affected by anxiety, depression, or schizophrenia

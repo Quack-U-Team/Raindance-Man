@@ -63,9 +63,12 @@ public class chainEnemy : MonoBehaviour
 
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
 
-        if (Mathf.Abs(targetPosition.x - transform.position.x) < 0.5f)
+        if(target != null)
         {
-            Shoot();
+            if (Mathf.Abs(targetPosition.x - transform.position.x) < followRange || Mathf.Abs(targetPosition.y - transform.position.y) < followRange ) 
+            {
+                Shoot();
+            }
         }
 
     }
@@ -78,9 +81,6 @@ public class chainEnemy : MonoBehaviour
             movement = Vector2.zero;
             return;
         }
-
-
-        
 
         float distance = Vector2.Distance(transform.position, target.position);
         Vector2 toPlayer = ((Vector2)(target.position) - (Vector2)transform.position).normalized;
@@ -201,8 +201,11 @@ public class chainEnemy : MonoBehaviour
    
     void Shoot()
     {
+        Debug.Log("Chains shoot()");
         if (isInCoolDown)
+        {
             return;
+        }
 
         GameObject newBullet = Instantiate(chainTemplate);
         newBullet.transform.position = transform.position;
