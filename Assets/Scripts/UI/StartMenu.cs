@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -44,7 +45,7 @@ public class StartMenu : MonoBehaviour
     public void StartGame(int i)
     {
         // UISound0.Play(); per esempio
-        SceneManager.LoadScene(i);
+        SceneManager.LoadScene(1);
     }
 
     public void Quit()

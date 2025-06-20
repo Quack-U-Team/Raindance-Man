@@ -165,14 +165,7 @@ public class auraEnemy : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if (collision.gameObject.CompareTag("Player"))
-        {
-
-            playerScript.ansia = true;
-            playerScript.mentalPointsRemove(10);
-            
-
-        }
+      
     }
 
     public void gotPlrTransform()

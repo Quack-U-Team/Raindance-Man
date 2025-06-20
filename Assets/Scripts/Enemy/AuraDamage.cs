@@ -55,7 +55,7 @@ public class AuraDamage : MonoBehaviour
                 auraEnemyScript.RefreshAI();
                 auraEnemyScript.target = collision.transform;
             }
-           
+            playerScript = collision.gameObject.GetComponent<PlayerMovement>();
         }
     }
 

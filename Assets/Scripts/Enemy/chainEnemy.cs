@@ -189,6 +189,10 @@ public class chainEnemy : MonoBehaviour
     {
         while (true)
         {
+            if (target == null)
+            {
+                break;
+            }
             targetPosition = target.position;
             yield return new WaitForSeconds(Random.Range(0.1f, 0.5f));
 
