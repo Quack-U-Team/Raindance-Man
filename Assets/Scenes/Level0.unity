@@ -15883,30 +15883,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8823593010472702019, guid: c93202d152653df4db3e2d7f544b889b, type: 3}
-      propertyPath: m_Color.b
-      value: 0.17924517
-      objectReference: {fileID: 0}
-    - target: {fileID: 8823593010472702019, guid: c93202d152653df4db3e2d7f544b889b, type: 3}
-      propertyPath: m_Color.g
-      value: 0.8433963
-      objectReference: {fileID: 0}
-    - target: {fileID: 8823593010472702019, guid: c93202d152653df4db3e2d7f544b889b, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8823593010472702019, guid: c93202d152653df4db3e2d7f544b889b, type: 3}
-      propertyPath: m_Intensity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8823593010472702019, guid: c93202d152653df4db3e2d7f544b889b, type: 3}
-      propertyPath: m_FalloffIntensity
-      value: 0.766
-      objectReference: {fileID: 0}
-    - target: {fileID: 8823593010472702019, guid: c93202d152653df4db3e2d7f544b889b, type: 3}
-      propertyPath: m_PointLightOuterRadius
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
