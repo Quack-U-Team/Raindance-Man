@@ -3,25 +3,20 @@ using UnityEngine.Rendering.Universal;
 
 public class Candle : MonoBehaviour
 {
-    private Light2D candleLight;
-    public float flickerAmount = 0.2f;
-    public float flickerSpeed = 0.3f;
-    private float baseIntensity;
 
-    void Start()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        candleLight = GetComponent<Light2D>();
-        if (candleLight != null)
+        if (collision.CompareTag("Player"))
         {
-            baseIntensity = candleLight.intensity;
+            print("entered heal area");
         }
     }
 
-    void Update()
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        if (candleLight != null)
+        if (collision.CompareTag("Player"))
         {
-            candleLight.intensity = baseIntensity + Mathf.Sin(Time.time * flickerSpeed) * flickerAmount;
+            print("exited heal area");
         }
     }
 }
