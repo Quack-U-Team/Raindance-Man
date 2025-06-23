@@ -19,21 +19,22 @@ public class PlayerMovement : MonoBehaviour
     public LineRenderer lineRenderer;
     public bool isMovingVert = false;
     public bool isMovingHorz = false;
-    public float dashSpeed = 500f; // Placeholder for dash speed, not implemented yet    
-
     public float rotationAngle = 0f;
-    public float dashDuration = 1f; // Placeholder for dash duration, not implemented yet
-    public float dashCooldown = 1f; // Placeholder for dash cooldown, not implemented yet
 
-    public float shootCooldown = 0.5f; // Placeholder for shoot cooldown, not implemented yet
-    public float shootRange = 30f; // Placeholder for shoot range, not implemented yet
+    [Header("Dash")]
+    public float dashSpeed = 500f; 
+    public float dashDuration = 1f;
+    public float dashCooldown = 1f;
 
+    [Header("Shooting")]
+    public float shootCooldown = 0.5f;
+    public float shootRange = 30f;
     public float shotDuration = 0.05f;
-    public float shotCooldown = 0.5f; // Placeholder for shot cooldown, not implemented yet
+    public float shotCooldown = 0.5f; 
     public float reloadTime = 2f;
-    public bool isReloading = false; // Placeholder for reloading state, not implemented yet
-    public int maxAmmo = 10; // Placeholder for maximum ammo, not implemented yet
-    public int currentAmmo = 10; // Placeholder for current ammo, not implemented yet
+    public bool isReloading = false;
+    public int maxAmmo = 10;
+    public int currentAmmo = 10;
 
     [Header("Status effects")]
     public bool ansia = false;
@@ -102,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
-
+    
     // Update is called once per frame
     void Update()
     {
