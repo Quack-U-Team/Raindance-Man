@@ -95,7 +95,9 @@ public class PlayerMovement : MonoBehaviour
             if (playerState == PlayerState.Dashing)
             {
                 anim.SetTrigger("roll");
+                GetComponentInChildren<TrailRenderer>().enabled = true;
             }
+            else { GetComponentInChildren<TrailRenderer>().enabled = false; }
 
             if (playerState == PlayerState.Shooting)
             {
@@ -189,19 +191,21 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(DashKey))
         {
-            print("DASH PRESSED");
-            if (playerState == PlayerState.Dashing || playerState == PlayerState.Shooting || isReloading)
+            if(PlayerPrefs.GetString("canDash") == "true")
             {
-                return; // Prevent dashing while already dashing or shooting
+                if (playerState == PlayerState.Dashing || playerState == PlayerState.Shooting || isReloading)
+                {
+                    return; // Prevent dashing while already dashing or shooting
+                }
+                if (!canDash)
+                {
+                    return; // Prevent dashing if dash is on cooldown
+                }
+                playerState = PlayerState.Dashing; // Set state to Dashing when the player dashes
+                canDash = false; // Set dash cooldown
+                Invoke("setIdleState", dashDuration); // Reset state to Idle after dash duration
+                Invoke("DashCooldownReset", dashDuration+dashCooldown); // Reset dash cooldown
             }
-            if (!canDash)
-            {
-                return; // Prevent dashing if dash is on cooldown
-            }
-            playerState = PlayerState.Dashing; // Set state to Dashing when the player dashes
-            canDash = false; // Set dash cooldown
-            Invoke("setIdleState", dashDuration); // Reset state to Idle after dash duration
-            Invoke("DashCooldownReset", dashDuration+dashCooldown); // Reset dash cooldown
 
         }
         if (playerState != PlayerState.Dashing )
@@ -323,13 +327,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        
-        
-
-
         rb.linearVelocity = new Vector2(movement.x * speed *depresSpeed, movement.y * speed * depresSpeed);
-       
-     
     }
 
     private void removeAnsia()

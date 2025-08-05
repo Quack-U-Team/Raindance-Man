@@ -124,4 +124,11 @@ public class InGameUI : MonoBehaviour
     {
         SceneManager.LoadScene(i);
     }
+
+
+    public void UnlockDash()
+    {
+        PlayerPrefs.SetString("canDash", "true");
+        PlayerPrefs.Save();
+    }
 }
