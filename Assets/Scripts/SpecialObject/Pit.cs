@@ -2,28 +2,23 @@ using UnityEngine;
 
 public class Pit : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        print("collided with something");
-        PlayerMovement pm;
-        if (collision.CompareTag("Player"))
+        print("collided");
+        if(collision.gameObject.GetComponent<PlayerMovement>() != null)
         {
-            if(collision.gameObject.TryGetComponent<PlayerMovement>(out pm))
+            PlayerMovement pm = collision.gameObject.GetComponent<PlayerMovement>();
+            print("got PlayerMovement");
+            if(pm.playerState != PlayerMovement.PlayerState.Dashing)
             {
-                if(pm.playerState != PlayerMovement.PlayerState.Dashing)
-                {
-                    print("player fell into a pit");
-                    pm.deathAnim();
-                }
-            }
-            else
-            {
-                Debug.LogWarning("Pit.cs - couldn't get PlayerMovement from collided object");
+                print("pm.deathAnim()");
+                pm.deathAnim();
             }
         }
     }
-    
 
-        
-    
+
+
+
 }
