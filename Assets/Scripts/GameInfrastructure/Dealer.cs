@@ -26,7 +26,6 @@ public class Dealer : MonoBehaviour
 
     void HideItems()
     {
-        print("Hiding all items");
         for (int i = 0; i < itemsInfo.Length; i++)
         {
             itemsInfo[i].SetActive(false);
@@ -63,6 +62,7 @@ public class Dealer : MonoBehaviour
                 }
                 else
                 {
+                    print("activating item info: "+ itemToShowIndex);
                     itemsInfo[itemToShowIndex].SetActive(true);
                 }
             }
