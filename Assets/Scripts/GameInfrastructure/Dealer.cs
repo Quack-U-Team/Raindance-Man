@@ -62,7 +62,7 @@ public class Dealer : MonoBehaviour
                 }
                 else
                 {
-                    print("activating item info: "+ itemToShowIndex);
+                    //print("activating item info: "+ itemToShowIndex);
                     itemsInfo[itemToShowIndex].SetActive(true);
                 }
             }
