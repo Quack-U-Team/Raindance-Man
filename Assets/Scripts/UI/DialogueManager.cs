@@ -28,17 +28,9 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
-        sentences = new Queue<string>();
-
         instance = this;
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            DisplayNextSentence();
-        }
+        sentences = new Queue<string>();
+        state = DialogueState.None;
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -52,6 +44,7 @@ public class DialogueManager : MonoBehaviour
 
         foreach (string sentence in dialogue.sentences)
         {
+            print("loading sentences");
             sentences.Enqueue(sentence);
         }
     }
@@ -73,11 +66,12 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator TypeSentence (string sentence)
     {
+        print("typing sentence...");
         sentenceText.text = "";
         foreach (char letter in sentence.ToCharArray())
         {
             sentenceText.text += letter;
-            yield return null; // change this for slower or faster text scroll
+            yield return new WaitForSecondsRealtime(0.02f); // why is this the problem
         }
     }
 
@@ -85,6 +79,6 @@ public class DialogueManager : MonoBehaviour
     {
         state = DialogueState.Ended;
         dialogueUI.SetActive(false);
-        print("end of conversation");
+        print("dialogue ended :(");
     }
 }

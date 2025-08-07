@@ -2561,7 +2561,7 @@ MonoBehaviour:
     - Yo! It's good to see you again
     - Sigh... Missions are pretty harsh these days... There's a spike in mental health
       problems
-    - Anyway, have a look at my items
+    - Anyway, have a look at my items!
 --- !u!114 &1239304587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2577,7 +2577,6 @@ MonoBehaviour:
   dialogueUI: {fileID: 2025192776}
   speakerName: {fileID: 1866016075}
   sentenceText: {fileID: 1766135848}
-  letterTick: 50
   state: 0
 --- !u!1 &1265846503
 GameObject:

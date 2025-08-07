@@ -14,11 +14,12 @@ public class DialogueTrigger : MonoBehaviour
     {
         if(Vector2.Distance(player.position, speaker.position) < range)
         {
-            //print("entered range to start dialogue");
+            print("entered range");
             canStartDialogue = true;
         }
         else
         {
+            print("left range");
             canStartDialogue = false;
         }
 
@@ -32,7 +33,13 @@ public class DialogueTrigger : MonoBehaviour
     {
         if(DialogueManager.instance.state == DialogueManager.DialogueState.None)
         {
+            print("starting dialogue");
             DialogueManager.instance.StartDialogue(dialogue);
+        }
+        if(DialogueManager.instance.state == DialogueManager.DialogueState.Started)
+        {
+            print("continuing dialogue");
+            DialogueManager.instance.DisplayNextSentence();
         }
     }
 }
