@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
     public GameObject dialogueUI;
+    AudioSource typewritingSound;
 
     public TextMeshProUGUI speakerName;
     public TextMeshProUGUI sentenceText;
@@ -29,8 +30,21 @@ public class DialogueManager : MonoBehaviour
     private void Start()
     {
         instance = this;
+        typewritingSound = GetComponent<AudioSource>();
         sentences = new Queue<string>();
         state = DialogueState.None;
+    }
+
+    private void Update()
+    {
+        if (state == DialogueState.Talking)
+        {
+            typewritingSound.Play();
+        }
+        else
+        {
+            typewritingSound.Stop();
+        }
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -70,9 +84,11 @@ public class DialogueManager : MonoBehaviour
         sentenceText.text = "";
         foreach (char letter in sentence.ToCharArray())
         {
+            state = DialogueState.Talking;
             sentenceText.text += letter;
             yield return new WaitForSecondsRealtime(0.02f); // why is this the problem
         }
+        state = DialogueState.Started;
     }
 
     void EndDialogue()
