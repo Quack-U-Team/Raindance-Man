@@ -6,13 +6,15 @@ public class UITween : MonoBehaviour
     public bool shrink;
 
     public GameObject loadingUI;
+    public static UITween instance;
 
     bool loadingAnimations = false;
 
     void Start()
     {
+        instance = this;
         LeanTween.init(800);
-        Transition();
+        //Transition();
     }
 
     public void Transition()
@@ -35,6 +37,9 @@ public class UITween : MonoBehaviour
 
     void Update()
     {
-        spinningCane.transform.Rotate(Vector3.up * 0.8f);
+        if (spinningCane != null)
+        { 
+            spinningCane.transform.Rotate(Vector3.up * 0.8f);
+        }
     }
 }

@@ -78,6 +78,7 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         state = DialogueState.Ended;
+        PlayerMovement.instance.Unfreeze();
         dialogueUI.SetActive(false);
         print("dialogue ended :(");
     }

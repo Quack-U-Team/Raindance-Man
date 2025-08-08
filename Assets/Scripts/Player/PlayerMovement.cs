@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement instance;
+
     [Header("Audio")]
     public AudioSource shootSound;
     public AudioSource reloadSound;
@@ -62,7 +64,8 @@ public class PlayerMovement : MonoBehaviour
         Idle,
         Moving,
         Shooting,
-        Dashing
+        Dashing,
+        Freezed
     }
     public PlayerState playerState = PlayerState.Idle;
 
@@ -72,15 +75,30 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask enemyLayer;
 
     private AudioSource enemyDeathSound;
-    
+    private RigidbodyConstraints2D originalConstraints;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        instance = this;
+        originalConstraints = rb.constraints;
+
         enemyDeathSound = this.GetComponent<AudioSource>();
         Time.fixedDeltaTime = 0.016f; // ~60 FixedUpdates/sec (anzich� 50)
         anim = this.GetComponentInChildren<Animator>();
         anim.SetTrigger("spawn");
+    }
+
+    public void Freeze()
+    {
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        playerState = PlayerState.Freezed;
+    }
+
+    public void Unfreeze()
+    {
+        rb.constraints = originalConstraints;
+        playerState = PlayerState.Idle;
     }
 
     void BaseAnimations()

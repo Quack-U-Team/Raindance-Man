@@ -23,6 +23,7 @@ public class DialogueTrigger : MonoBehaviour
 
         if (canStartDialogue && Input.GetKeyDown(KeyCode.E))
         {
+            PlayerMovement.instance.Freeze();
             TriggerDialogue();
         }
     }
