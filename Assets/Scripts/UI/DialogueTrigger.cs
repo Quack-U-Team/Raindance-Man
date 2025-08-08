@@ -14,12 +14,10 @@ public class DialogueTrigger : MonoBehaviour
     {
         if(Vector2.Distance(player.position, speaker.position) < range)
         {
-            print("entered range");
             canStartDialogue = true;
         }
         else
         {
-            print("left range");
             canStartDialogue = false;
         }
 
