@@ -302,7 +302,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Vector2 endPosition = shootPoint.position + (-shootPoint.up * shootRange);
             ShowLaser(shootPoint.position, endPosition);
-            Debug.Log("Missed!");
+            //Debug.Log("Missed!");
         }
 
     }
