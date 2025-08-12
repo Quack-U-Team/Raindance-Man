@@ -37,10 +37,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _CheckerSize: 30
+    - _CheckerSize: 20
     - _CheckerSpeed: 0
     - _Noise1Speed: 0.2
     - _Noise2Speed: 0.2
+    - _Power: 0
     - _ScrollChecker: 0
     - _UseChecker: 0
     m_Colors:
