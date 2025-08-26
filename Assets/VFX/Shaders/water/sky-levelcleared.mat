@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: sky
+  m_Name: sky-levelcleared
   m_Shader: {fileID: -6465566751694194690, guid: aff4ecd7890132749a6229521a998a82, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -61,10 +61,10 @@ Material:
     - _Speed: 2
     - _ZWrite: 0
     m_Colors:
-    - _BaseColor: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 0}
+    - _BaseColor: {r: 0.043137252, g: 0.12978615, b: 1, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
-    - _RippleColor: {r: 1, g: 1, b: 1, a: 0}
+    - _RippleColor: {r: 0.29636884, g: 0.33452955, b: 0.5660378, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &4283128357509458052

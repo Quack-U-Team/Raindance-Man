@@ -14,6 +14,7 @@ public class Collectibles : MonoBehaviour
             if (player != null)
             {
                 player.collectiblesFound += 1;
+                InGameUI.UpdateCollectibleCountText(player.collectiblesFound);
             }
             Instantiate(collectibleSoundPrefab);
             Destroy(gameObject);

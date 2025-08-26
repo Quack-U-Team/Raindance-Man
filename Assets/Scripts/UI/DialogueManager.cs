@@ -27,6 +27,11 @@ public class DialogueManager : MonoBehaviour
     [HideInInspector]
     public DialogueState state;
 
+    private void Awake()
+    {
+        Time.timeScale = 1f;
+    }
+
     private void Start()
     {
         instance = this;

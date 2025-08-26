@@ -1,3 +1,4 @@
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -5,11 +6,14 @@ using UnityEngine.UI;
 
 public class InGameUI : MonoBehaviour
 {
-    [Header("Audio")]
+    [Header("FX")]
     public GameObject inGameOst;
+    public SpriteRenderer background;
+    public Material levelClearedBackgroundMat;
 
     [Header("Other")]
     private static InGameUI instance;
+    public TextMeshProUGUI collectibleCounter;
     public GameObject victoryScreen, gameOverScreen;
     public PlayerMovement playerMovement;
 
@@ -92,6 +96,7 @@ public class InGameUI : MonoBehaviour
     {
         if (instance != null) 
         {
+            instance.background.material = instance.levelClearedBackgroundMat;
             Time.timeScale = 0f;
             instance.inGameOst.SetActive(false);
             instance.victoryScreen.SetActive(true);
@@ -130,5 +135,10 @@ public class InGameUI : MonoBehaviour
     {
         PlayerPrefs.SetString("canDash", "true");
         PlayerPrefs.Save();
+    }
+
+    public static void UpdateCollectibleCountText(int count)
+    {
+        instance.collectibleCounter.text = count.ToString() + "/3";
     }
 }

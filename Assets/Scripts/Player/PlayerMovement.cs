@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
     public Animator emotionIcon;
     public ParticleSystem jammedParticles;
+    public Image insaneOverlay;
 
     [Header("Physics and balance")]
     public Transform plrTransform;
@@ -385,6 +387,8 @@ public class PlayerMovement : MonoBehaviour
         {
             deathAnim(); // Call death animation if mental points reach zero
         }
+
+        
     }
 
 
@@ -392,7 +396,8 @@ public class PlayerMovement : MonoBehaviour
     {
         jammedSound.Play();
         jammedParticles.Play();
-        //emotionIcon.SetTrigger("");
+        // emotionIcon.SetTrigger("");
+        // camera shake
     }
 
 }
