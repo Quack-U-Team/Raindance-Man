@@ -6,11 +6,14 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Audio")]
     public AudioSource shootSound;
+    public AudioSource jammedSound;
     public AudioSource reloadSound;
     public AudioSource deathSound;
-
-    [Header("Animation")]
+    
+    [Header("Effects")]
     private Animator anim;
+    public Animator emotionIcon;
+    public ParticleSystem jammedParticles;
 
     [Header("Physics and balance")]
     public Transform plrTransform;
@@ -201,7 +204,7 @@ public class PlayerMovement : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Anxiety prevented shooting this time.");
+                    JamWeapon(); // feedback to make the player understand the weapon is jammed
                 }
             }
 
@@ -291,7 +294,7 @@ public class PlayerMovement : MonoBehaviour
 
                 if (!ansia && !depressione)
                 {
-                    mentalPointsRemove(-5); // Reduce mental points by 10 if not affected by anxiety, depression, or schizophrenia
+                    mentalPointsRemove(-5); // Reduce mental points by 5 if not affected by anxiety, depression, or schizophrenia
                 }
                
             }
@@ -384,5 +387,12 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+
+    void JamWeapon()
+    {
+        jammedSound.Play();
+        jammedParticles.Play();
+        //emotionIcon.SetTrigger("");
+    }
 
 }
