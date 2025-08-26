@@ -7546,7 +7546,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1030933835
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14134,7 +14134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b98d8306b2877d347b87b4aaf80c96b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoadingUI: {fileID: 2077904841}
+  LoadingUI: {fileID: 306112953}
   levelToLoad: 2
 --- !u!61 &1436694921
 BoxCollider2D:
@@ -18817,7 +18817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b98d8306b2877d347b87b4aaf80c96b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoadingUI: {fileID: 2077904841}
+  LoadingUI: {fileID: 306112953}
   levelToLoad: 0
 --- !u!212 &1987133521
 SpriteRenderer:

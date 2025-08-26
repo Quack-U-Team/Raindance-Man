@@ -15,6 +15,7 @@ public class EnterLevel : MonoBehaviour
 
     IEnumerator EnterTheLevel()
     {
+        LoadingUI.SetActive(true);
         PlayerMovement.instance.Freeze();
         yield return new WaitForSecondsRealtime(2f);
         SceneManager.LoadScene(levelToLoad);
